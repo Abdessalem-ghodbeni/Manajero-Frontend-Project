@@ -1,0 +1,1171 @@
+<nb-layout>
+  <nb-layout-header fixed>
+    <nb-icon icon="layers-outline"></nb-icon>
+    <span class="header-title">Presentation of the SAFe Agile Methodology
+    </span>
+  </nb-layout-header>
+
+  <nb-layout-column>
+    <div class="row mb-5">
+      <div class="col-md-12">
+        <h1 class="main-title animated-title">
+          <span>S</span><span>A</span><span>F</span><span>e</span><span> -</span><span>M</span
+          ><span>e</span><span>t</span><span>h</span><span>o</span><span>d</span
+          ><span>o</span><span>l</span><span>o</span><span>g</span><span>y</span
+          >
+        </h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header
+            class="d-flex justify-content-between align-items-center"
+          >
+            <img
+              src="assets/images/safee.webp"
+              class="img-fluid custumer_logoSafe"
+              alt=""
+            />
+            <h2 class="title text-center">
+              What Is SAFe
+              <nb-icon icon="question-mark-circle" status="info"></nb-icon>
+              <nb-icon icon="question-mark-circle" status="info"></nb-icon>
+              <nb-icon icon="question-mark-circle" status="info"></nb-icon>
+            </h2>
+            <img
+              src="assets/images/safe.png"
+              class="img-fluid custumer_logoSafe"
+              alt=""
+            />
+          </nb-card-header>
+          <nb-card-body>
+            <div class="d-flex text-danger">
+              <p class="safe_description">
+                <strong>The Scaled Agile Framework (SAFe)</strong>  is a methodology that 
+                helps large organizations adopt agile principles at scale. <br />
+                <span *ngIf="showFullDescription">
+                  SAFe Scrum is an Agile method used by teams within an Agile Release Train (ART)
+                  to deliver customer value in a short period of time. SAFe Scrum teams use iterations,
+                  Kanban systems, and Scrum events to plan, execute, demonstrate, and reflect
+                  on their work. Many teams use SAFe Scrum as their primary Agile team process,
+                  but they are not limited to Scrum and may also use SAFe Team Kanban.
+                  However, all SAFe teams apply integrated quality techniques and other practices
+                  and activities not defined in Scrum. SAFe Scrum teams collaborate 
+                  with other Agile teams and ART stakeholders, creating and deploying
+                  solutions that benefit their customers. This article describes how Agile
+                  teams apply SAFe Scrum.
+
+               <!--    <div class="text-center mt-5">
+                  <video width="640" height="360" controls>
+                      <source
+                        src=" assets/images/WhatsApp Video 2024-06-17 at 23.03.06.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video> 
+                    <div class="video-container">
+                      <iframe
+                        src=" assets/images/WhatsApp Video 2024-06-17 at 23.03.06.mp4"
+                        title=" video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; 
+                                clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      >
+                      </iframe>
+                    </div>
+                  </div> -->
+                </span>
+              </p>
+              <strong
+                class="mx-2 mt-2 custumer_showMore"
+                (click)="toggleDescription()"
+                *ngIf="!showFullDescription"
+              >
+                More...
+              </strong>
+            </div>
+            <p class="safe_description mt-4">
+              <span *ngIf="showFullDescription">
+                Agile teams applying SAFe Scrum follow a regular cadence of events 
+                to achieve a common goal, delivering value to the business and its customers. 
+                These teams have the authority and autonomy needed to plan, execute, 
+                and manage their work, make decisions within their scope, and adapt 
+                to changing conditions in the best way they see fit. SAFe Principle #9, 
+                "decentralize decision-making," ensures alignment and fosters subtle and 
+                minimal management direction for SAFe Scrum teams. 
+                © Scaled Agile, Inc. Include this copyright notice with the copied
+                content. Read the FAQs on how to use SAFe content and trademarks
+                here:
+                <a
+                  href="https://www.scaledagile.com/about/about-us/permissions-faq/"
+                  >https://www.scaledagile.com/about/about-us/permissions-faq/</a
+                >
+              </span>
+            </p>
+            <strong
+              class="custumer_showMore text-danger"
+              (click)="toggleDescription()"
+              *ngIf="showFullDescription"
+            >
+              Less...
+            </strong>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header class="text-center">
+            <h2 class="title">
+              Why SAFe
+              <nb-icon icon="question-mark-circle" status="info"></nb-icon>
+              <nb-icon icon="question-mark-circle" status="info"></nb-icon>
+              <nb-icon icon="question-mark-circle" status="info"></nb-icon>
+            </h2>
+          </nb-card-header>
+          <nb-card-body>
+            <div class="row advantages-inconvenients mt-4">
+              <div class="col-11 mx-5 my-4">
+                <p class="text-center">
+                  <strong>
+                    Is SAFe® the most widely used framework in the world for enterprise agility? 
+                    Get the answer from the creator of SAFe, Dean Leffingwell, in this 18-minute video.
+                    Dean shares real-world results achieved by some of the largest global companies,
+                    including American Express, Bosch, Porsche, Lockheed Martin, PepsiCo, and others.
+                  </strong>
+                </p>
+              </div>
+              <div class="col-12 col-md-5 p-2 mx-2">
+                <h4>Advantages</h4>
+
+                <p class="mt-3 mb-4">
+                  <strong
+                    >The SAFe (Scaled Agile Framework) methodology offers several
+                     notable advantages for organizations seeking to adopt agility at scale:</strong
+                  >
+                </p>
+                <ul>
+                  <li class="my-3">
+                    <nb-icon icon="checkmark-circle" status="success"></nb-icon>
+                    Facilitates collaboration among large teams
+                  </li>
+                  <li class="my-3">
+                    <nb-icon icon="checkmark-circle" status="success"></nb-icon>
+                    Enhances transparency and visibility of projects
+                  </li>
+                  <li class="my-3">
+                    <nb-icon icon="checkmark-circle" status="success"></nb-icon>
+                    Enables better management of dependencies
+
+                  </li>
+                  <li class="my-3">
+                    <nb-icon icon="checkmark-circle" status="success"></nb-icon>
+                    Promotes continuous improvement
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-5 offset-md-1 p-2">
+                <h4>Disadvantages</h4>
+                <p class="mt-3 mb-4">
+                  <strong>
+                  Despite its many advantages, SAFe also has some drawbacks that need to be considered:
+                    </strong >
+                </p>
+                <ul>
+                  <li class="my-3">
+                    <nb-icon icon="close" status="danger"></nb-icon>
+                    Can be complex to implement initially
+                  </li>
+                  <li class="my-3">
+                    <nb-icon icon="close" status="danger"></nb-icon>
+                    Requires significant commitment from management
+                  </li>
+                  <li class="my-3">
+                    <nb-icon icon="close" status="danger"></nb-icon>
+                    Can lead to rigidity if poorly applied
+                  </li>
+                  <li class="my-3">
+                    <nb-icon icon="close" status="danger"></nb-icon>
+                    Can be costly in terms of training and resources
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header
+            class="d-flex justify-content-center align-items-center"
+          >
+            <img
+              src="assets/images/safee.webp"
+              class="img-fluid custumer_logoSafe"
+              alt=""
+            />
+            <h2 class="title text-center">
+              SAFe Lifecycle
+              <nb-icon icon="question-mark-circle" status="info"></nb-icon>
+              <nb-icon icon="question-mark-circle" status="info"></nb-icon>
+              <nb-icon icon="question-mark-circle" status="info"></nb-icon>
+            </h2>
+          </nb-card-header>
+          <nb-card-body>
+            <p>
+              <strong
+                >The following sections provide an overview of this cycle.
+              </strong>
+            </p>
+
+            <div class="text-center p-2 mt-5">
+              <img
+                src="assets/images/cycle-vie.png"
+                class="img-fluid w-75"
+                alt=""
+              />
+            </div>
+
+            <nb-accordion>
+              <nb-accordion-item>
+                <nb-accordion-item-header
+                  >Team Backlog
+                </nb-accordion-item-header>
+                <nb-accordion-item-body>
+                  <div class="row justify-content-center align-items-center">
+                    <div class="col-12 ms-2 col-md-4 safe_description">
+                      <strong> The Team Backlog</strong>
+                      contains all upcoming work necessary to advance the solution. 
+                      Most of the work is captured by user stories,
+                       but other tasks and activities (e.g., training, support) can also be included.
+                     The team backlog is partially filled during PI Planning, and teams establish
+                      their PI objectives. Teams continuously refine the backlog to ensure it always
+                       contains stories ready to be implemented without significant risk or surprises.
+                        During backlog refinement, teams review upcoming user stories 
+                        and features (if any) to define, discuss, estimate, and establish acceptance 
+                        criteria for the next backlog items. Backlog refinement is an ongoing process 
+                        throughout the iteration.
+                    </div>
+                    <div class="col-12 offset-md-1 col-md-6">
+                      <img
+                        src=" assets/images/backlog.jpg"
+                        class="img-fluid w-100"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </nb-accordion-item-body>
+              </nb-accordion-item>
+            </nb-accordion>
+
+            <nb-accordion class="mt-3">
+              <nb-accordion-item>
+                <nb-accordion-item-header
+                  >the Sprints
+                </nb-accordion-item-header>
+                <nb-accordion-item-body>
+                  <div class="row justify-content-center align-items-center">
+                    <div class="col-12 ms-2 col-md-4">
+                      <img
+                        src=" assets/images/iteration.png"
+                        class="img-fluid w-100"
+                        alt=""
+                      />
+                    </div>
+                    <div class="col-12 col-md-6 safe_description text-center">
+                      <strong> Sprints</strong>
+                      <br />
+                      are the heartbeat of Scrum and create a work rhythm within the 
+                      larger PI timeframe. All the work necessary to complete the iteration, 
+                      including planning, team synchronization, iteration review, 
+                      and retrospective, is carried out within the iterations. 
+                      Each iteration is a standard, fixed-length period, usually lasting two weeks. 
+                      During the iteration, the team delivers high-quality value increments 
+                      in the form of functional and tested software, solutions, or other valuable 
+                      artifacts. Iterations are continuous and sequential, with a new iteration 
+                      beginning immediately after the previous one.
+                    </div>
+                  </div>
+                </nb-accordion-item-body>
+              </nb-accordion-item>
+            </nb-accordion>
+
+            <nb-accordion class="mt-3">
+              <nb-accordion-item>
+                <nb-accordion-item-header
+                  >Sprint Planning
+                </nb-accordion-item-header>
+                <nb-accordion-item-body>
+                  <div class="container mt-4">
+                    <h5
+                      class="mb-4 me-3 custumer-color-title-planification-sprint"
+                    >
+                    What is Sprint Planning?
+                      <nb-icon
+                        icon="question-mark-circle"
+                        status="info"
+                      ></nb-icon>
+                      <nb-icon
+                        icon="question-mark-circle"
+                        status="info"
+                      ></nb-icon>
+                      <nb-icon
+                        icon="question-mark-circle"
+                        status="info"
+                      ></nb-icon>
+                    </h5>
+                    <p class="text-justify mt-2">
+                      <strong>Sprint Planning</strong> 
+                       is the first event of the iteration, 
+                      typically facilitated by the Scrum Master or Team Coach. 
+                      All team members collaborate to determine which parts 
+                      of the team backlog can be completed during the upcoming iteration. 
+                      The resulting plan is recorded in the iteration backlog.
+                    </p>
+                    <h6
+                      class="my-4 me-3 custumer-color-title-planification-sprint"
+                    >
+                    Participants and Preparation
+                  </h6>
+                  <ul class="list-unstyled">
+                    <li class="my-3">
+                      <nb-icon icon="person-outline" class="mx-2"></nb-icon>
+                      <strong>Product Owner</strong>: Ensures that participants are ready to discuss the most critical backlog items and their alignment with sprint goals and PI objectives.
+                    </li>
+                    <li class="my-3">
+                      <nb-icon icon="people-outline" class="mx-2"></nb-icon>
+                      <strong>Scrum Team</strong>: May invite others for additional guidance.
+                    </li>
+                  </ul>
+
+                    <h6
+                      class="my-4 me-3 custumer-color-title-planification-sprint"
+                    >
+                    Sprint Planning Objectives
+                  </h6>
+                  <ul class="list-unstyled">
+                    <li class="my-3">
+                      <nb-icon icon="award-outline" class="mx-2"></nb-icon>
+                      <strong>Sprint Value</strong>: Why is this sprint valuable?
+                    </li>
+                    <li class="my-3">
+                      <nb-icon icon="cube-outline" class="mx-2"></nb-icon>
+                      <strong>Sprint Content</strong>: What can be accomplished in this sprint?
+                    </li>
+                    <li class="my-3">
+                      <nb-icon class="mx-2" icon="settings-2-outline"></nb-icon>
+                      <strong>Work Planning</strong>: How will the work be carried out and completed?
+                    </li>
+                  </ul>
+
+                    <h6
+                      class="my-4 me-3 custumer-color-title-planification-sprint"
+                    >
+                    Process
+                    </h6>
+                    <ul class="list-unstyled">
+                      <li class="my-3">
+                        <nb-icon class="mx-2" icon="checkmark-square-outline"></nb-icon>
+                        <strong>Acceptance Criteria</strong>: The team develops acceptance criteria for each User Story.
+                      </li>
+                      <li class="my-3">
+                        <nb-icon class="mx-2" icon="activity-outline"></nb-icon>
+                        <strong>Effort Estimation</strong>: Estimates the effort needed to complete each story.
+                      </li>
+                      <li class="my-3">
+                        <nb-icon class="mx-2" icon="checkmark-circle-outline"></nb-icon>
+                        <strong>Story Selection</strong>: Selects candidate stories based on the available capacity for the sprint.
+                      </li>
+                      <li class="my-3">
+                        <nb-icon class="mx-2" icon="layers-outline"></nb-icon>
+                        <strong>Work Planning</strong>: Plans the necessary work to create a value increment that meets the Definition of Done (DoD).
+                      </li>
+                      <li class="my-3">
+                        <nb-icon class="mx-2" icon="layout-outline"></nb-icon>
+                        <strong>Decomposition of Items</strong>: Breaks down backlog items into user stories or tasks that can be completed in a day or two.
+                      </li>
+                      <li class="my-3">
+                        <nb-icon class="mx-2" icon="folder-add-outline"></nb-icon>
+                        <strong>Team Commitment</strong>: The team commits to the work and records the sprint backlog in a visible location (storyboard, Kanban board, Agile project management tool).
+                      </li>
+                    </ul>
+                    <h6
+                      class="my-4 me-3 custumer-color-title-planification-sprint"
+                    >
+                    Time Limit
+
+                    </h6>
+                    <p>
+                    The planning is limited to a maximum of approximately two hours for a two-week sprint.
+                    </p>
+                    <h6
+                      class="my-4 me-3 custumer-color-title-planification-sprint"
+                    >
+                    Summary
+                    </h6>
+                    In summary, sprint planning in SAFe is a collaborative and structured process aimed 
+                    at defining and organizing the team's work for the upcoming sprint, 
+                    while ensuring alignment with sprint goals and PI objectives.
+                  </div>
+                </nb-accordion-item-body>
+              </nb-accordion-item>
+            </nb-accordion>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <h2 class="title">SAFe Levels</h2>
+          </nb-card-header>
+          <nb-card-body>
+            <nb-accordion>
+              <nb-accordion-item>
+                <nb-accordion-item-header
+                  >Sprint Objectives
+                </nb-accordion-item-header>
+                <nb-accordion-item-body>
+                  <div class="row justify-content-center align-items-center">
+                    <div class="col-12 ms-2 col-md-8 safe_description">
+                      <div class="container mt-4">
+                        <h6
+                          class="my-4 me-3 custumer-color-title-planification-sprint"
+                        >
+                        Alignment and Coordination
+                        </h6>
+                        <ul class="list-unstyled my-3">
+                          <li class="my-3">
+                            <nb-icon icon="target-outline" pack="eva"></nb-icon>
+                            <strong>Aligning on a Common Objective :</strong>
+                            Each team member clearly understands what the team is striving to achieve.
+                          </li>
+                          <li class="my-3">
+                            <nb-icon
+                              class="mx-2"
+                              icon="layers-outline"
+                              pack="eva"
+                            ></nb-icon>
+                            <strong
+                              >Harmonizing Efforts at the ART PI Level
+                              :</strong
+                            >
+                            Facilitating coordination between teams and managing dependencies.
+                          </li>
+                          <li class="my-3">
+                            <nb-icon
+                              class="mx-2"
+                              icon="bar-chart-outline"
+                              pack="eva"
+                            ></nb-icon>
+                            <strong
+                              >Providing Transparency and Management Information
+                              :</strong
+                            >
+                            Offering a clear view of what is planned and the progress made.
+                          </li>
+                        </ul>
+
+                        <h6
+                          class="my-4 me-3 custumer-color-title-planification-sprint"
+                        >
+                        Creating Objectives
+                        </h6>
+                        <p>
+                          After planning the iteration and establishing the corresponding backlog,
+                           the Agile team synthesizes the iteration objectives. 
+                           These objectives are derived from the backlog and aligned with the broader 
+                           goals of the Program Increment (PI).
+                        </p>
+                        <img
+                          src=" assets/images/golas.jpeg"
+                          class="img-fluid w-50 text-center"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </nb-accordion-item-body>
+              </nb-accordion-item>
+            </nb-accordion>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <h2 class="title">Sprint Backlog
+            </h2>
+          </nb-card-header>
+          <nb-card-body>
+            <div class="row">
+              <div class="col-12 p-3 text-center">
+                <p class="text-jutify custumer-line-height my-3">
+                  <span>
+                    During sprint planning, teams select tasks to be completed from the sprint backlog 
+                    by extracting items from the team backlog. This sprint backlog is regularly adjusted, 
+                    as PI planning is overarching and requires adaptations for each sprint. 
+                    Teams receive feedback from their past sprints, as well as demonstrations 
+                    from the system and other collaborating teams. Local concerns such as defects,
+                     technical debt, and maintenance, as well as delays at the ART level and committed PI 
+                     objectives, also influence the content of the sprint backlog.
+                    </span
+                  >
+                </p>
+                <div class="text-center mt-5">
+                  <img
+                    src=" assets/images/carnet.jpeg"
+                    class="img-fluid w-50"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <h2 class="title">Delivery</h2>
+          </nb-card-header>
+          <nb-card-body>
+            <div class="row">
+              <div class="col-12 p-3 text-center">
+                <p class="text-jutify custumer-line-height my-3">
+                  <span>
+                    In SAFe, Scrum teams adhere to the rhythms and synchronizations of 
+                    the Agile Release Train (ART), which facilitates alignment, 
+                    dependency management, and rapid learning cycles for the entire solution. 
+                    During a sprint, each team collaborates to define, build, 
+                    and test the planned stories. They monitor the sprint's progress, 
+                    improve value flow using Kanban boards, and participate in team synchronization 
+                    events. Teams deliver stories throughout the sprint and avoid delays. They apply 
+                    quality practices to build the system correctly. Completed stories are showcased
+                     during regular iteration demonstrations and reviews.</span
+                  >
+                </p>
+                <div class="text-center mt-5">
+                  <img
+                    src=" assets/images/livraison.jpeg"
+                    class="img-fluid w-50"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header
+            class="d-flex justify-content-between align-items-center"
+          >
+            <h2>Team Synchronization
+            </h2>
+          </nb-card-header>
+          <nb-card-body>
+            <div class="d-flex text-danger">
+              <p class="safe_description">
+                <strong> Team Synchronization                </strong>
+                is a short daily meeting (typically 15 minutes or less) to assess progress towards iteration goals, communicate, and adjust upcoming work.<br />
+                <span>
+                  The team may use various structures or techniques during this synchronization 
+                  to establish an action plan for coordinating the day's work. 
+                  However, this meeting is not the only time adjustments can be made: 
+                  the team collaborates and discusses necessary adaptations or replanning at any time.
+                   High-performing teams use this synchronization to identify opportunities
+                    for mutual support in successfully achieving their iteration goals. 
+                    The Scrum Master or Team Coach takes note of topics requiring further 
+                    discussion on a dedicated "parking lot" board. Only relevant parties 
+                    stay behind to discuss these topics in more detail. Ineffective team 
+                    synchronizations can reveal deeper issues requiring a systemic approach to 
+                    resolution, often under the responsibility of the Scrum Master or Team Coach.
+                  <div class="text-center mt-5">
+                    <img
+                      src=" assets/images/eqipe.png"
+                      class="img-fluid w-50"
+                    />
+                  </div>
+                </span>
+              </p>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <div class="d-flex align-items-center">
+              <h2>Illustration of Agile Increment
+
+              </h2>
+            </div>
+          </nb-card-header>
+          <nb-card-body>
+            <p>
+              <nb-icon class="mx-2" icon="cube-outline" pack="eva"></nb-icon>
+              The illustration below shows how new features of the solution evolve with each sprint.
+               Each increment builds upon those that came before it and is verified to ensure they function well together.            </p>
+            <div class="d-flex justify-content-center align-items-center mt-3">
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+            </div>
+            <p class="mt-3">
+              <nb-icon class="mx-2" icon="cube-outline" pack="eva"></nb-icon>
+              Each increment is a functional, tested, and usable solution that meets the quality criteria defined 
+              in the Definition of Done (DoD). The team may deliver multiple increments during a single sprint, and the entirety is inspected during the sprint review for validation.
+                        </p>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <div class="d-flex align-items-center">
+              <h6 class="ml-2">Agile Sprint Review
+              </h6>
+            </div>
+          </nb-card-header>
+          <nb-card-body>
+            <p>
+              <nb-icon class="mx-2" icon="eye-outline" pack="eva"></nb-icon>
+              For Scrum teams, the sprint review is a crucial event where each team inspects the outcomes of the sprint. They present their work to key stakeholders and assess progress towards sprint goals and PI objectives.
+            </p>
+            <div class="d-flex justify-content-center align-items-center mt-3">
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+            </div>
+            <p class="mt-3">
+              <nb-icon class="mx-2" icon="eye-outline" pack="eva"></nb-icon>
+              The team also determines future adaptations to the product or process based on the review outcomes. Stakeholders and the team collaborate on the way forward, potentially adjusting the Team Backlog to address new opportunities. The iteration review is time-boxed to a maximum of 90 minutes for a typical two-week iteration.
+            </p>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <div class="d-flex align-items-center">
+              <h6 class="ml-2">Sprint Retrospective
+
+              </h6>
+            </div>
+          </nb-card-header>
+          <nb-card-body>
+            <div
+              class="row p-2 d-flex justify-content-center align-items-center"
+            >
+              <div class="col-12 col-md-6 p-2">
+                <p>
+                  <nb-icon
+                    class="mx-2"
+                    icon="clipboard-outline"
+                    pack="eva"
+                  ></nb-icon>
+                  The Sprint Retrospective is the final event of the sprint. Its main objective is to reflect on the sprint and derive new ideas to improve its process and the solution. The retrospective contributes to instilling the concept of continuous improvement, a core value in SAFe.
+                </p>
+                <div
+                  class="d-flex justify-content-center align-items-center mt-3"
+                >
+                  <nb-icon
+                    icon="checkmark-circle-outline"
+                    pack="eva"
+                    size="large"
+                    class="mr-2"
+                  ></nb-icon>
+                  <nb-icon
+                    icon="checkmark-circle-outline"
+                    pack="eva"
+                    size="large"
+                    class="mr-2"
+                  ></nb-icon>
+                  <nb-icon
+                    icon="checkmark-circle-outline"
+                    pack="eva"
+                    size="large"
+                    class="mr-2"
+                  ></nb-icon>
+                </div>
+                <p class="mt-3">
+                  <nb-icon
+                    class="mx-2"
+                    icon="clipboard-outline"
+                    pack="eva"
+                  ></nb-icon>
+                  During the retrospective, the team discusses what went well, issues encountered, and how these issues were (or were not) resolved. They identify the most useful changes to improve, address promptly, or record in the backlog for the next sprint. The retrospective is limited to a maximum of approximately 60 minutes for a typical two-week sprint.
+                </p>
+              </div>
+              <div class="col-12 offset-md-1 col-md-5 p-2">
+                <img src=" assets/images/retro.jpeg" class="img-fluid w-75" />
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <div class="d-flex align-items-center">
+              <h6 class="ml-2">Participating in the System Demo
+
+              </h6>
+            </div>
+          </nb-card-header>
+          <nb-card-body>
+            <div
+              class="row p-2 d-flex justify-content-center align-items-center"
+            >
+              <div class="col-12 col-md-6 p-2">
+                <p>
+                  <nb-icon class="mx-2" icon="tv-outline" pack="eva"></nb-icon>
+                  The system demo provides a comprehensive view of the new features delivered in the last sprint by all teams on the Agile Release Train (ART). Each demo allows all ART members to objectively assess the progress made during the Program Increment (PI).
+
+
+                </p>
+                <div
+                  class="d-flex justify-content-center align-items-center mt-3"
+                >
+                  <nb-icon
+                    icon="checkmark-circle-outline"
+                    pack="eva"
+                    size="large"
+                    class="mr-2"
+                  ></nb-icon>
+                  <nb-icon
+                    icon="checkmark-circle-outline"
+                    pack="eva"
+                    size="large"
+                    class="mr-2"
+                  ></nb-icon>
+                  <nb-icon
+                    icon="checkmark-circle-outline"
+                    pack="eva"
+                    size="large"
+                    class="mr-2"
+                  ></nb-icon>
+                </div>
+                <p class="mt-3">
+                  <nb-icon class="mx-2" icon="tv-outline" pack="eva"></nb-icon>
+                  All ART members participate or attend the system demonstration, ensuring a collective vision and sharing of the advancements achieved.
+                </p>
+              </div>
+              <div class="col-12 offset-md-1 col-md-5 p-2">
+                <img src=" assets/images/demo.png" class="img-fluid w-50" />
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <div class="d-flex align-items-center">
+              <h6 class="ml-2">Tracking Progress
+              </h6>
+            </div>
+          </nb-card-header>
+          <nb-card-body>
+            <p>
+              <nb-icon
+                class="mx-2"
+                icon="clipboard-outline"
+                pack="eva"
+              ></nb-icon>
+              Using a Kanban board, the team monitors the progress of its sprints as shown in the following figure. Mature Scrum teams deliver stories throughout the sprint without "dropping the ball" on deadlines.
+
+            </p>
+            <div class="d-flex justify-content-center align-items-center mt-3">
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+            </div>
+            <div class="text-center mt-5">
+              <img src=" assets/images/SuiviProg.png" class="img-fluid w-75" />
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <div class="d-flex align-items-center">
+              <h6 class="ml-2">Rôles SAFe Scrum</h6>
+            </div>
+          </nb-card-header>
+          <nb-card-body>
+            <div
+              class="row d-flex p-2 justify-content-center align-items-center"
+            >
+              <div class="col-12 col-md-7 p-1">
+                <ul class="my-3">
+                  <li class="my-3">
+                    <nb-icon
+                      class="mx-2"
+                      icon="people-outline"
+                      pack="eva"
+                    ></nb-icon>
+                    La taille de l'équipe Scrum (généralement dix personnes ou
+                    moins) optimise la communication, l'interaction et la
+                    capacité à apporter de la valeur.
+                  </li>
+                  <li class="my-3">
+                    <nb-icon
+                      class="mx-2"
+                      icon="shield-outline"
+                      pack="eva"
+                    ></nb-icon>
+                    "L'équipe Scrum est suffisamment petite pour rester agile et
+                    suffisamment grande pour accomplir un travail important en
+                    un sprint."
+                  </li>
+                  <li class="my-3">
+                    <nb-icon
+                      class="mx-2"
+                      icon="people-outline"
+                      pack="eva"
+                    ></nb-icon>
+                    Toutes les équipes SAFe Agile, y compris celles qui
+                    utilisent Scrum, ont deux rôles d'équipe spécialisés :
+                    <ul>
+                      <li class="my-3">
+                        <nb-icon
+                          class="mx-2"
+                          icon="shield-outline"
+                          pack="eva"
+                        ></nb-icon>
+                        Le Scrum Master/Team Coach (parfois à temps partiel)
+                        coordonne le flux de travail, encourageant un
+                        environnement propice à la haute performance et à
+                        l'amélioration continue.
+                      </li>
+                      <li class="my-3">
+                        <nb-icon
+                          class="mx-2"
+                          icon="shield-outline"
+                          pack="eva"
+                        ></nb-icon>
+                        Le Product Owner (généralement à temps plein) comprend
+                        les besoins des clients, priorise le backlog de l'équipe
+                        et assure que le bon travail est réalisé de la bonne
+                        manière.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 offset-md-1 col-md-4 p-2">
+                <img
+                  src=" assets/images/scrumMaster.png"
+                  class="img-fluid w-100"
+                />
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <div class="d-flex align-items-center">
+              <h6 class="ml-2">Les Équipes dans le Train Agile</h6>
+            </div>
+          </nb-card-header>
+          <nb-card-body>
+            <p>
+              <nb-icon class="mx-2" icon="people-outline" pack="eva"></nb-icon>
+              Bien que les équipes soient interfonctionnelles, une seule équipe
+              Agile peut ne pas être en mesure de fournir une valeur complète à
+              l'utilisateur final pour de grands systèmes incluant différentes
+              plates-formes technologiques et disciplines variées comme
+              l'ingénierie matérielle, logicielle et système.
+            </p>
+            <p>
+              <nb-icon
+                class="mx-2"
+                icon="checkmark-circle-outline"
+                pack="eva"
+              ></nb-icon>
+              Les équipes doivent s’efforcer de fournir une valeur de bout en
+              bout de manière la plus indépendante possible afin d’optimiser les
+              flux.
+            </p>
+            <p>
+              <nb-icon class="mx-2" icon="grid-outline" pack="eva"></nb-icon>
+              Au sein de l'Agile Release Train (ART), toutes les équipes
+              planifient, font des démonstrations et apprennent ensemble,
+              facilitant l'alignement et la collaboration pour créer des
+              solutions plus vastes.
+            </p>
+            <p>
+              <nb-icon class="mx-2" icon="sync-outline" pack="eva"></nb-icon>
+              L'ART permet de réduire ou éliminer les dépendances et d'améliorer
+              le flux d'équipe et d'ART, favorisant l'exploration,
+              l'intégration, le déploiement et la libération de valeur de
+              manière plus indépendante.
+            </p>
+
+            <img src=" assets/images/AgileTrain.png" class="img-fluid w-100" />
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-4">
+        <nb-card>
+          <nb-card-body>
+            <h5 class="card-title">Témoignage 1</h5>
+            <p class="card-text">
+              Des choses révolutionnaires peuvent se produire lorsque la pizza
+              est servie. Vous découvrirez pourquoi en rejoignant les
+              visionnaires de Porsche, Mattias Ulbrich et Dr. Oliver Seifert,
+              pour une discussion franche sur la transformation de l'une des
+              marques automobiles les plus emblématiques du monde en pionnier
+              numérique.
+            </p>
+            <div class="embed-responsive embed-responsive-16by9 mb-3">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.youtube.com/embed/video_id_2"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- <div class="video-container">
+              <iframe
+                src="https://youtu.be/MzswnGpVtMc?si=ZfOFXSP6a74lhlf7"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div> -->
+          </nb-card-body>
+        </nb-card>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <nb-card>
+          <nb-card-body>
+            <h5 class="card-title">Témoignage 2</h5>
+            <p class="card-text">
+              Lorsque le PDG de votre entreprise parraine une initiative
+              stratégique pour remplacer un système central en seulement deux
+              ans, la pression pour réussir est énorme. Pour ajouter à la
+              difficulté, la migration devrait se faire par une bascule complète
+              du vieux système vers le nouveau ; il n'y avait tout simplement
+              pas moyen de faire fonctionner les deux systèmes simultanément.
+            </p>
+            <div class="embed-responsive embed-responsive-16by9 mb-3">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.youtube.com/embed/video_id_2"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- <a
+              href="https://www.youtube.com/watch?v=video_id_2"
+              class="btn btn-primary btn-sm"
+              target="_blank"
+              >Voir sur YouTube</a
+            > -->
+          </nb-card-body>
+        </nb-card>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <nb-card>
+          <nb-card-body>
+            <h5 class="card-title">Témoignage 3</h5>
+            <p class="card-text">
+              Des choses révolutionnaires peuvent se produire lorsque la pizza
+              est servie. Vous découvrirez pourquoi en rejoignant les
+              visionnaires de Porsche, Mattias Ulbrich et Dr. Oliver Seifert,
+              pour une discussion franche sur la transformation de l'une des
+              marques automobiles les plus emblématiques du monde en pionnier
+              numérique.
+            </p>
+            <div class="embed-responsive embed-responsive-16by9 mb-3">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.youtube.com/embed/video_id_3"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- <a
+              href="https://www.youtube.com/watch?v=video_id_3"
+              class="btn btn-primary btn-sm"
+              target="_blank"
+              >Voir sur YouTube</a
+            > -->
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <div class="d-flex align-items-center text-center">
+              <h6 class="ml-2">Conclusion sur SAFe</h6>
+            </div>
+          </nb-card-header>
+          <nb-card-body>
+            <p>
+              <nb-icon
+                class="mx-2"
+                icon="checkmark-circle-outline"
+                pack="eva"
+              ></nb-icon>
+              SAFe offre une approche structurée pour l'adoption Agile à grande
+              échelle, alignant stratégie et opérations à travers différents
+              niveaux de l'organisation.
+            </p>
+            <p>
+              <nb-icon
+                class="mx-2"
+                icon="checkmark-circle-outline"
+                pack="eva"
+              ></nb-icon>
+              En intégrant des principes Lean-Agile, SAFe favorise la livraison
+              continue de valeur client, améliorant la qualité et la
+              prévisibilité des livraisons.
+            </p>
+            <p>
+              <nb-icon
+                class="mx-2"
+                icon="checkmark-circle-outline"
+                pack="eva"
+              ></nb-icon>
+              Les rôles définis et les événements structurés encouragent
+              l'auto-organisation des équipes tout en facilitant la coordination
+              et la gestion des dépendances.
+            </p>
+            <p>
+              <nb-icon
+                class="mx-2"
+                icon="checkmark-circle-outline"
+                pack="eva"
+              ></nb-icon>
+              SAFe promeut l'innovation continue par la réflexion régulière,
+              l'amélioration des processus et l'adaptation rapide aux
+              changements du marché.
+            </p>
+            <p>
+              <nb-icon
+                class="mx-2"
+                icon="checkmark-circle-outline"
+                pack="eva"
+              ></nb-icon>
+              Ce cadre aide les organisations à devenir plus flexibles,
+              réactives et orientées vers la valeur client, renforçant leur
+              compétitivité dans un environnement dynamique.
+            </p>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <button class="btn">
+      <div>LET'S START</div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none">
+        <path d="M11.6801 14.62L14.2401 12.06L11.6801 9.5" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M4 12.0601H14.17" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M12 4C16.42 4 20 7 20 12C20 17 16.42 20 12 20" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </button>
+  </nb-layout-column>
+
+</nb-layout>
