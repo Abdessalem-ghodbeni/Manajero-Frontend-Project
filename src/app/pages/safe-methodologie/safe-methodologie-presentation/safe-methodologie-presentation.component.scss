@@ -1,0 +1,185 @@
+.custumer_text{
+    font-size: medium;
+    letter-spacing: 0.7px;
+ line-height: 2;
+  }
+  .cusmuer_siez_img{
+    width: 35%;
+  }
+
+  ol li {
+    font-size: medium;
+    letter-spacing: 0.7px;
+ line-height: 2;
+  }
+  .custumer_logoSafe{
+    height:8.5%;
+    width: 8.5%;
+  }
+ 
+//  .custumer_div{
+//   border-radius:2px solid var(--card-header-primary-background-color);
+//  }
+
+ .custumer_div {
+  position: relative;
+  
+  border: 2px solid var(--card-header-primary-background-color);
+  border-radius:10px;
+    overflow: hidden;
+}
+
+.custumer_div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(to right, #ffff, #0077ff, #0000ff, #00a2ff);
+  animation: bordermove 2s linear infinite;
+}
+
+@keyframes bordermove {
+  0% {
+    border-radius: 10px;
+    transform: translate(0, 0);
+  }
+  25% {
+    border-radius: 50% 10% 10% 50%;
+    transform: translate(100%, 0);
+  }
+  50% {
+    border-radius: 10% 50% 50% 10%;
+    transform: translate(100%, 100%);
+  }
+  75% {
+    border-radius: 50% 10% 10% 50%;
+    transform: translate(0, 100%);
+  }
+  100% {
+    border-radius: 10px;
+    transform: translate(0, 0);
+  }
+}
+
+
+.custumer_div_solution{
+  position: relative;
+  
+  border: 2px solid gray;
+  border-radius:10px;
+    overflow: hidden;
+}
+.custumer_div_solution::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(to right, #ffff, #86888b, #848486, #929292);
+  animation: bordermove 2s linear infinite;
+}
+
+  
+  
+.advantages-inconvenients ul {
+  list-style-type: none;  
+  padding: 0;
+}
+
+
+  
+
+
+  
+.product-cards-container {
+  display: flex;
+  gap: 5rem; /* Adjust the gap between cards */
+  justify-content: center; /* Center the cards horizontally */
+  padding: 1rem; /* Optional: add some padding around the container */
+  flex-wrap: wrap; /* Ensure cards wrap to next line if needed */
+}
+
+.padtitle{
+  padding-top: 100px;
+}
+
+.card {
+  width: 40%;
+  height: 254px;
+  color: transparent;
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  gap: 5px;
+  overflow: visible;
+}
+
+.card-title {
+  grid-column: span 2;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black; /* Adjust the color as needed */
+  margin: 0 0 10px 0;
+}
+.cardtitle{
+  grid-column: span 2;
+}
+
+.card .item {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.item:hover {
+  transform: scale(1.5);
+  transition: all 350ms ease-in-out;
+}
+
+.item svg {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 7px;
+}
+
+
+
+.item--3 {
+  background: #ffffff;
+}
+
+.item--4 {
+  background: #ffffff;
+}
+
+.quantity {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.text {
+  font-size: 12px;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+
+.text--3 {
+  color: rgba(66, 193, 110, 1);
+}
+
+.text--4 {
+  color:#FA5252;
+}
