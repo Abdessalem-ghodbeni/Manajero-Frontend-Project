@@ -7,6 +7,7 @@ import { DemoSAFeComponent } from './demo-safe/demo-safe.component';
 import { NbThemeModule, NbLayoutModule, NbCardModule, NbButtonModule, NbIconModule ,NbStepperModule,NbAccordionModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { SafeMethodologiePresentationComponent } from './safe-methodologie-presentation/safe-methodologie-presentation.component';
+import { FormsModule } from '@angular/forms';
  
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { SafeMethodologiePresentationComponent } from './safe-methodologie-prese
     NbButtonModule,NbAccordionModule ,
     NbIconModule,
     NbEvaIconsModule,NbStepperModule ,NbWindowModule,
-    SAFeMethodologieRoutingModule
+    SAFeMethodologieRoutingModule,
+    FormsModule,
+
   ]
 })
 export class SAFeMethodologieModule { }
