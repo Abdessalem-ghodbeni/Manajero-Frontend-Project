@@ -7,34 +7,40 @@
     </nb-layout-header>
 
     <nb-layout-column>
-        <nb-card>
+        <nb-card *ngIf="demo">
+            <form [formGroup]="DemoForm" (ngSubmit)="updateDemo()">
+
             <nb-card-body>
+                
                 <nb-card-body>
+
                     <nb-stepper orientation="horizontal" disableStepNavigation>
                         <nb-step [label]="labelOne">
                             <ng-template #labelOne>Introduction</ng-template>
                             <nb-card>
                                 <nb-card-header>First section</nb-card-header>
                                 <nb-card-body>
+
                                     <div class="row justify-content-center align-items-center">
-                                        <div class="col-12 col-md-5 p-2">
-                                            <div class="text-center">
-                                                <input type="file" nbInput status="primary" placeholder="Upload File">
-                                            </div>
+                                      <div class="col-12 col-md-5 p-2">
+                                        <div class="text-center">
+                                          <input type="file" nbInput status="primary" placeholder="Upload File">
                                         </div>
-                                        <div class="col-12 col-md-4 text-center">
-                                            <input type="text" nbInput fullWidth status="primary" placeholder="Title">
-                                            <textarea nbInput placeholder="Description" status="primary"
-                                                class="mt-4"></textarea>
-                                        </div>
+                                      </div>
+                                      <div class="col-12 col-md-4 text-center">
+                                       <input type="text" nbInput fullWidth status="primary" formControlName="s1_FS_Title" placeholder="Title" required>
+<textarea nbInput placeholder="Description" status="primary" class="mt-4" formControlName="s1_FS_Description" required></textarea>
+
+                                      </div>
                                     </div>
-                                </nb-card-body>
+                                
+                                  </nb-card-body>
                               </nb-card>
                               <nb-card>
                                 <nb-card-header>Second section</nb-card-header>
                                 <nb-card-body>
                                     <div class="mx-1">
-                                        <textarea nbInput fullWidth placeholder="Introduction" class="mt-4"
+                                        <textarea nbInput fullWidth placeholder="Introduction" formControlName="s1_SS_Introduction" class="mt-4"
                                             status="primary"></textarea>
                                     </div>
                                     <div class="row justify-content-center mt-5">
@@ -835,9 +841,19 @@
                                 </nb-card-body>
                               </nb-card>
                         </div>
+                        <button class="done-button btn btn-primary btn-sm mt-2" type="submit">
+                            <span class="circle1"></span>
+                            <span class="circle2"></span>
+                            <span class="circle3"></span>
+                            <span class="circle4"></span>
+                            <span class="circle5"></span>
+                            <span class="text">Done</span>
+                          </button>
                     </nb-card-body>
                 </nb-card>
             </nb-card-body>
+        </form>
+
         </nb-card>
     </nb-layout-column>
 </nb-layout>

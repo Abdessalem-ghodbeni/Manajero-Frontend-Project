@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Demo } from '../models/demo.model';
+import { Demo } from '../modals/demo.model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +15,8 @@ export class DemoService {
     return this.http.get<Demo>(`${this.apiUrl}/${id}`);
   }
 
-  updateDemoById(id: string, demo: Demo): Observable<Demo> {
-    return this.http.put<Demo>(`${this.apiUrl}/${id}`, demo);
+  updateDemoById(id: string, demo: any): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/${id}`, demo);
   }
   
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DemoService } from '../../services/demo.service';
-import { Demo } from '../../models/demo.model';
 import { Router } from '@angular/router';
+import { Demo } from '../../modals/demo.model';
 
 @Component({
   selector: 'ngx-safe-methodologie-presentation',
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class SafeMethodologiePresentationComponent implements OnInit {
   
   id = "669019f2b2b147200accaa7e";
-  demo: Demo | null = null;
+  demo: any | null = null;
 
   constructor(private demoService: DemoService,private router: Router) { }
  
