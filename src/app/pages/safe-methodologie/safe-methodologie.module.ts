@@ -1,29 +1,38 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NbWindowModule } from '@nebular/theme';
+import { NbInputModule, NbWindowModule } from '@nebular/theme';
 import { SAFeMethodologieRoutingModule } from './safe-methodologie-routing.module';
 import { DemoSAFeComponent } from './demo-safe/demo-safe.component';
  
 import { NbThemeModule, NbLayoutModule, NbCardModule, NbButtonModule, NbIconModule ,NbStepperModule,NbAccordionModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { SafeMethodologiePresentationComponent } from './safe-methodologie-presentation/safe-methodologie-presentation.component';
-import { FormsModule } from '@angular/forms';
+import { UpdateDemoComponent } from './update-demo/update-demo.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
  
 @NgModule({
   declarations: [
     DemoSAFeComponent,
     SafeMethodologiePresentationComponent,
+    UpdateDemoComponent,
  
   ],
   imports: [
-    CommonModule,NbButtonModule,NbCardModule,NbLayoutModule,
+    CommonModule,
+    NbButtonModule,
     NbCardModule,
-    NbButtonModule,NbAccordionModule ,
+    NbLayoutModule,
+    NbCardModule,
+    NbButtonModule,
+    NbAccordionModule ,
     NbIconModule,
-    NbEvaIconsModule,NbStepperModule ,NbWindowModule,
+    NbEvaIconsModule,
+    NbStepperModule,
+    NbWindowModule,
     SAFeMethodologieRoutingModule,
+    NbInputModule ,
     FormsModule,
-
+    ReactiveFormsModule
   ]
 })
 export class SAFeMethodologieModule { }
