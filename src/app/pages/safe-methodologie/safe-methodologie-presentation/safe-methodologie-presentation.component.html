@@ -788,9 +788,26 @@
             <nb-step [label]="labelSeven">
               <ng-template #labelSeven> Start</ng-template>
 
+<div class="padtitle row justify-content-center align-items-center">
+  <div class="col-12 col-md-8"> <!-- 8 columns for text (2 parts) -->
+    <strong class="titlecard mt-2 mb-4">
+      <nb-icon icon="cube-outline" class="mx-2" style="font-size: 2rem"></nb-icon>Summary</strong>
+    <h2 class="secondtitlecard"> In conclusion, the SAFE method provides a structured and effective approach to achieving personal and professional goals. By focusing on Specificity, Accountability, Focus, and Evaluation, individuals can create clear objectives, stay committed, maintain direction, and regularly assess their progress. This holistic framework not only enhances productivity but also fosters continuous improvement and success.</h2>
+    <p style="color: blue;">Click on Start to begin using the SAFE method and unlock your path to achievement!</p>
+
+    <nb-icon icon="question-mark-circle-outline" style="font-size: 2rem"></nb-icon>
+  </div>
+  <div class="col-12 col-md-4"> <!-- 4 columns for image (1 part) -->
+    <img
+    src="assets/images/conclusion.jpg"
+    class="img-fluid custumer_logoSafe"
+    alt=""
+  />
+  </div>
+</div>
               <div class="button-container">
                 <button class="prev-button" nbButton nbStepperPrevious>prev</button>
-                <button class="next-button" nbButton nbStepperNext>Start</button>
+                <button class="next-button" nbButton (click)="goToSafeProcess()">Start</button>
               </div>
             </nb-step>
           </nb-stepper>
