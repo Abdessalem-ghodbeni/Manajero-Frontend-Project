@@ -1,4 +1,4 @@
-package com.example.safeagile.Services;
+package com.example.safeagile.Services.IServices;
 
 import com.example.safeagile.Models.Demo;
 import org.springframework.web.multipart.MultipartFile;

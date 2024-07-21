@@ -1,6 +1,6 @@
 package com.example.safeagile.Controllers;
 import com.example.safeagile.Models.Demo;
-import com.example.safeagile.Services.IDemoService;
+import com.example.safeagile.Services.IServices.IDemoService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
-import java.util.List;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

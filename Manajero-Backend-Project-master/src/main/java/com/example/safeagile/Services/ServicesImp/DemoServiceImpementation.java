@@ -1,7 +1,8 @@
-package com.example.safeagile.Services;
+package com.example.safeagile.Services.ServicesImp;
 
 import com.example.safeagile.Models.Demo;
 import com.example.safeagile.Repositories.IDemoRepository;
+import com.example.safeagile.Services.IServices.IDemoService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.Binary;
