@@ -321,3 +321,29 @@ nb-accordion-item-body {
     font-size: 16px;
     font-weight: bold;
   }
+
+  .task-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacement entre les éléments */
+    width: 300px; /* Ajustez la largeur selon vos besoins */
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espacement entre le label et le champ de saisie */
+  }
+  
+  .input-group label {
+    font-weight: bold;
+  }
+  
+  .task-input {
+    width: 100%;
+  }
+  
+  button {
+    align-self: flex-start; /* Aligne le bouton à gauche */
+  }
+  
