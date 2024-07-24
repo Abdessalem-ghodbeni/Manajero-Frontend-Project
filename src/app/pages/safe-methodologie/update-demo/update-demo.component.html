@@ -8,7 +8,7 @@
 
     <nb-layout-column>
         <nb-card *ngIf="demo">
-            <form [formGroup]="DemoForm" (ngSubmit)="updateDemo()">
+            <form [formGroup]="demoForm" (ngSubmit)="updateDemo()">
 
             <nb-card-body>
                 
@@ -24,7 +24,8 @@
                                     <div class="row justify-content-center align-items-center">
                                       <div class="col-12 col-md-5 p-2">
                                         <div class="text-center">
-                                          <input type="file" nbInput status="primary" placeholder="Upload File">
+                                            <input type="file" nbInput status="primary" class="mt-4" placeholder="Upload File">
+                                          
                                         </div>
                                       </div>
                                       <div class="col-12 col-md-4 text-center">
@@ -176,43 +177,37 @@
                                         <div class="row">
                                             <div class="col-6">
                                                 <h3 class="card-title text-primary">Advantages</h3>
-                                                <textarea nbInput fullWidth placeholder="Title" status="primary"></textarea>
-        
-                                                <nb-card class="hover-line  mt-3 p-4">
-                                                    <input type="text" nbInput fullWidth status="primary"
-                                                        placeholder="Enter the benefits..">
+                                                <textarea nbInput fullWidth placeholder="Title" formControlName="s2_FS_Title" class="mt-4" status="primary"></textarea>
+                                        
+                                                <nb-card class="hover-line mt-3 p-4">
+                                                  <input type="text" nbInput fullWidth status="primary" formControlName="s2_SS_Benefits1" placeholder="Enter the benefits.." required>
                                                 </nb-card>
-                                                <nb-card class="hover-line  p-4">
-                                                    <input type="text" nbInput fullWidth status="primary"
-                                                        placeholder="Enter the benefits..">
+                                                <nb-card class="hover-line p-4">
+                                                  <input type="text" nbInput fullWidth status="primary" formControlName="s2_SS_Benefits2" placeholder="Enter the benefits.." required>
                                                 </nb-card>
-                                                <nb-card class="hover-line  p-4">
-                                                    <input type="text" nbInput fullWidth status="primary"
-                                                        placeholder="Enter the benefits..">
+                                                <nb-card class="hover-line p-4">
+                                                  <input type="text" nbInput fullWidth status="primary" formControlName="s2_SS_Benefits3" placeholder="Enter the benefits.." required>
                                                 </nb-card>
-                                                <nb-card class="hover-line  p-4">
-                                                    <input type="text" nbInput fullWidth status="primary"
-                                                        placeholder="Enter the benefits..">
+                                                <nb-card class="hover-line p-4">
+                                                  <input type="text" nbInput fullWidth status="primary" formControlName="s2_SS_Benefits4" placeholder="Enter the benefits.." required>
                                                 </nb-card>
-                                            </div>
-                                            <div class="col-6">
+                                              </div>
+                                              
+                                              <div class="col-6">
                                                 <h3 class="card-title text-primary">Limitations</h3>
-                                                <textarea nbInput fullWidth placeholder="Title" status="primary"></textarea>
+                                                <textarea nbInput fullWidth placeholder="Title" formControlName="s2_SS_Title" class="mt-4" status="primary"></textarea>
+                                        
                                                 <nb-card class="hover-lineproblem mt-3 p-4">
-                                                    <input type="text" nbInput fullWidth status="primary"
-                                                        placeholder="Enter the limitations..">
+                                                  <input type="text" nbInput fullWidth status="primary" formControlName="s2_SS_Limitations1" placeholder="Enter the limitations.." required>
                                                 </nb-card>
                                                 <nb-card class="hover-lineproblem p-4">
-                                                    <input type="text" nbInput fullWidth status="primary"
-                                                        placeholder="Enter the limitations..">
+                                                  <input type="text" nbInput fullWidth status="primary" formControlName="s2_SS_Limitations2" placeholder="Enter the limitations.." required>
                                                 </nb-card>
                                                 <nb-card class="hover-lineproblem p-4">
-                                                    <input type="text" nbInput fullWidth status="primary"
-                                                        placeholder="Enter the limitations..">
+                                                  <input type="text" nbInput fullWidth status="primary" formControlName="s2_SS_Limitations3" placeholder="Enter the limitations.." required>
                                                 </nb-card>
                                                 <nb-card class="hover-lineproblem p-4">
-                                                    <input type="text" nbInput fullWidth status="primary"
-                                                        placeholder="Enter the limitations..">
+                                                  <input type="text" nbInput fullWidth status="primary" formControlName="s2_SS_Limitations4" placeholder="Enter the limitations.." required>
                                                 </nb-card>
                                             </div>
                                         </div>
@@ -232,12 +227,14 @@
                                     <div class=" row justify-content-center align-items-center">
                                         <div class="col-12 col-md-8"> <!-- 8 columns for text (2 parts) -->
                                             <strong class="">
-                                                <input type="text" nbInput placeholder="Title" status="primary">
+                                                <input type="text" nbInput  status="primary" formControlName="s3_FS_Title" placeholder="Title" required>
+
                                             </strong>
-                                            <input type="text" nbInput fullWidth placeholder="Subtitle" class="mt-2"
-                                                status="primary">
-                                            <textarea nbInput fullWidth placeholder="Enter description.." class="mt-2"
-                                                status="primary"></textarea>
+                                           
+                                                <input type="text" nbInput  fullWidth  status="primary" formControlName="s3_FS_Subtitle" placeholder="Subtitle" required>
+
+                                                <textarea nbInput fullWidth placeholder="Enter description.." formControlName="s3_FS_Description" class="mt-4" status="primary"> </textarea>
+
                                         </div>
                                         <div class="col-12 col-md-4"> <!-- 4 columns for image (1 part) -->
                                             <input type="file" nbInput status="primary" class="mt-4"
@@ -251,11 +248,11 @@
                                 <nb-card-body>
                                     <div class="row ">
                                         <div class="col-md-12 text-start">
-                                            <input type="text" nbInput placeholder="Title" status="primary">
+                                            <input type="text" nbInput  status="primary" formControlName="s3_SS_Title" placeholder="Title" required>
                                         </div>
                                     </div>
-                                    <input type="text" nbInput fullWidth placeholder="Subtitle" class="mt-2"
-                                        status="primary">
+                                
+                                        <input type="text" nbInput class="mt-2" fullWidth status="primary" formControlName="s3_SS_Subtitle" placeholder="Subtitle" required>
 
                                     <div class="text-center p-2 mt-2">
                                         <input type="file" nbInput status="primary" class="mt-4"
@@ -282,20 +279,20 @@
                                             <nb-card-header>Explication section</nb-card-header>
                                             <nb-card-body>
                                                 <div class="row mt-2">
-                                                    <input type="text" nbInput fullWidth placeholder="Enter text.."
-                                                        status="primary">
+                                                    <input type="text" nbInput fullWidth status="primary" formControlName="s3_TS_Ex_Text1"  required>
+
                                                 </div>
                                                 <div class="row mt-2">
-                                                    <input type="text" nbInput fullWidth placeholder="Enter text.."
-                                                        status="primary">
+                                                    <input type="text" nbInput fullWidth status="primary" formControlName="s3_TS_Ex_Text2"  required>
+
                                                 </div>
                                                 <div class="row mt-2">
-                                                    <input type="text" nbInput fullWidth placeholder="Enter text.."
-                                                        status="primary">
+                                                    <input type="text" nbInput fullWidth status="primary" formControlName="s3_TS_Ex_Text3"  required>
+
                                                 </div>
                                                 <div class="row mt-2">
-                                                    <input type="text" nbInput fullWidth placeholder="Enter text.."
-                                                        status="primary">
+                                                    <input type="text" nbInput fullWidth status="primary" formControlName="s3_TS_Ex_Text4"  required>
+
                                                 </div>
                                             </nb-card-body>
                                         </nb-card>
@@ -307,38 +304,32 @@
                                 <nb-card-body>
                                     <div class="row mt-4">
                                         <div class="col-md-12 text-center">
-                                            <input type="text" nbInput placeholder="Title" status="primary">
+                                            <input type="text" nbInput  status="primary" formControlName="s3_FoS_Title"  required>
+
                                         </div>
                                     </div>
                                     <div class="row mt-4">
                                         <div class="col-md-12">
                                             <nb-card>
                                                 <nb-card-header class="custumer_text">
-                                                    <input type="text" nbInput fullWidth placeholder="Subtitle"
-                                                        class="mt-2" status="primary">
+                                                    <input type="text" nbInput fullWidth status="primary" formControlName="s3_FoS_Subtitle" placeholder="Title" required>
+
                                                 </nb-card-header>
                                                 <nb-card-body>
 
-                                                    <input type="text" nbInput fullWidth placeholder="Enter text.."
-                                                        class="mt-2" status="primary">
-                                                    <input type="text" nbInput fullWidth placeholder="Enter text.."
-                                                        class="mt-2" status="primary">
-                                                    <input type="text" nbInput fullWidth placeholder="Enter text.."
-                                                        class="mt-2" status="primary">
-                                                    <input type="text" nbInput fullWidth placeholder="Enter text.."
-                                                        class="mt-2" status="primary">
-                                                    <input type="text" nbInput fullWidth placeholder="Enter text.."
-                                                        class="mt-2" status="primary">
-                                                    <input type="text" nbInput fullWidth placeholder="Enter text.."
-                                                        class="mt-2" status="primary">
-                                                    <input type="text" nbInput fullWidth placeholder="Enter text.."
-                                                        class="mt-2" status="primary">
-                                                    <input type="text" nbInput fullWidth placeholder="Enter text.."
-                                                        class="mt-2" status="primary">
-                                                    <input type="text" nbInput fullWidth placeholder="Enter text.."
-                                                        class="mt-2" status="primary">
-                                                    <input type="text" nbInput fullWidth placeholder="Enter text.."
-                                                        class="mt-2" status="primary">
+                                                   
+                                                 <input type="text"  class="mt-2" nbInput fullWidth status="primary" formControlName="s3_FoS_Text1" required>
+                                                 <input type="text"  class="mt-2" nbInput fullWidth status="primary" formControlName="s3_FoS_Text2" required>
+                                                 <input type="text"  class="mt-2" nbInput fullWidth status="primary" formControlName="s3_FoS_Text3" required>
+                                                 <input type="text"  class="mt-2" nbInput fullWidth status="primary" formControlName="s3_FoS_Text4" required>
+                                                 <input type="text"  class="mt-2" nbInput fullWidth status="primary" formControlName="s3_FoS_Text5" required>
+                                                 <input type="text"  class="mt-2" nbInput fullWidth status="primary" formControlName="s3_FoS_Text6" required>
+                                                 <input type="text"  class="mt-2" nbInput fullWidth status="primary" formControlName="s3_FoS_Text7" required>
+                                                 <input type="text"  class="mt-2" nbInput fullWidth status="primary" formControlName="s3_FoS_Text8" required>
+                                                 <input type="text"  class="mt-2" nbInput fullWidth status="primary" formControlName="s3_FoS_Text9" required>
+                                                 <input type="text"  class="mt-2" nbInput fullWidth status="primary" formControlName="s3_FoS_Text10" required>
+
+                                                  
                                                 </nb-card-body>
                                             </nb-card>
                                         </div>
@@ -351,14 +342,14 @@
 
                                     <div class="row mt-4">
                                         <div class="col-md-12 text-center">
-                                            <input type="text" nbInput placeholder="Title" status="primary">
+                                            <input type="text"  formControlName="s3_FiS_Title_center" nbInput placeholder="Title" status="primary">
                                         </div>
                                     </div>
                                     <div class="row mt-4">
                                         <div class="col-md-6 mb-4">
                                             <nb-card class="hover-line">
-                                                <input type="text" nbInput placeholder="Title" status="primary">
-                                                <input type="text" nbInput fullWidth placeholder="Subtitle" class="mt-2"
+                                                <input type="text" nbInput  formControlName="s3_FiS_Title1"status="primary">
+                                                <input type="text" nbInput fullWidth  formControlName="s3_FiS_Subtitle1" class="mt-2"
                                                     status="primary">
                                             </nb-card>
                                             <!-- Assuming you have included the necessary Nebular and Icon libraries -->
@@ -373,8 +364,8 @@
                                         </div>
                                         <div class="col-md-6 mb-4">
                                             <nb-card class="hover-line">
-                                                <input type="text" nbInput placeholder="Title" status="primary">
-                                                <input type="text" nbInput fullWidth placeholder="Subtitle" class="mt-2"
+                                                <input type="text" nbInput  formControlName="s3_FiS_Title2" status="primary">
+                                                <input type="text" nbInput fullWidth  formControlName="s3_FiS_Subtitle2" class="mt-2"
                                                     status="primary">
                                             </nb-card>
                                         </div>
@@ -382,15 +373,15 @@
                                     <div class="row mt-4">
                                         <div class="col-md-6 mb-4">
                                             <nb-card class="hover-line">
-                                                <input type="text" nbInput placeholder="Title" status="primary">
-                                                <input type="text" nbInput fullWidth placeholder="Subtitle" class="mt-2"
+                                                <input type="text" nbInput formControlName="s3_FiS_Title3" status="primary">
+                                                <input type="text" nbInput fullWidth formControlName="s3_FiS_Subtitle3" class="mt-2"
                                                     status="primary">
                                             </nb-card>
                                         </div>
                                         <div class="col-md-6 mb-4">
                                             <nb-card class="hover-line">
-                                                <input type="text" nbInput placeholder="Title" status="primary">
-                                                <input type="text" nbInput fullWidth placeholder="Subtitle" class="mt-2"
+                                                <input type="text" nbInput formControlName="s3_FiS_Title4" status="primary">
+                                                <input type="text" nbInput fullWidth formControlName="s3_FiS_Subtitle4" class="mt-2"
                                                     status="primary">
                                             </nb-card>
                                         </div>
@@ -403,37 +394,21 @@
                                 <nb-card-body>
                                     <div class="row mt-4">
                                         <div class="col-md-12 text-center">
-                                            <input type="text" nbInput placeholder="Title" status="primary">
+                                            <input type="text" nbInput formControlName="s3_SIS_Title_center" status="primary">
                                         </div>
                                     </div>
                                     <div class="row mt-4">
                                         <div class="col-md-6 mb-4">
                                             <nb-card class="hover-line">
-                                                <input type="text" nbInput placeholder="Title" status="primary">
-                                                <input type="text" nbInput fullWidth placeholder="Subtitle" class="mt-2"
+                                                <input type="text" nbInput formControlName="s3_SIS_Title1" status="primary">
+                                                <input type="text" nbInput fullWidth formControlName="s3_SIS_Subtitle1" class="mt-2"
                                                     status="primary">
                                             </nb-card>
                                         </div>
                                         <div class="col-md-6 mb-4">
                                             <nb-card class="hover-line">
-                                                <input type="text" nbInput placeholder="Title" status="primary">
-                                                <input type="text" nbInput fullWidth placeholder="Subtitle" class="mt-2"
-                                                    status="primary">
-                                            </nb-card>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-4">
-                                        <div class="col-md-6 mb-4">
-                                            <nb-card class="hover-line">
-                                                <input type="text" nbInput placeholder="Title" status="primary">
-                                                <input type="text" nbInput fullWidth placeholder="Subtitle" class="mt-2"
-                                                    status="primary">
-                                            </nb-card>
-                                        </div>
-                                        <div class="col-md-6 mb-4">
-                                            <nb-card class="hover-line">
-                                                <input type="text" nbInput placeholder="Title" status="primary">
-                                                <input type="text" nbInput fullWidth placeholder="Subtitle" class="mt-2"
+                                                <input type="text" nbInput formControlName="s3_SIS_Title2" status="primary">
+                                                <input type="text" nbInput fullWidth  formControlName="s3_SIS_Subtitle2" class="mt-2"
                                                     status="primary">
                                             </nb-card>
                                         </div>
@@ -441,8 +416,24 @@
                                     <div class="row mt-4">
                                         <div class="col-md-6 mb-4">
                                             <nb-card class="hover-line">
-                                                <input type="text" nbInput placeholder="Title" status="primary">
-                                                <input type="text" nbInput fullWidth placeholder="Subtitle" class="mt-2"
+                                                <input type="text" nbInput formControlName="s3_SIS_Title3" status="primary">
+                                                <input type="text" nbInput fullWidth formControlName="s3_SIS_Subtitle3"  class="mt-2"
+                                                    status="primary">
+                                            </nb-card>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <nb-card class="hover-line">
+                                                <input type="text" nbInput formControlName="s3_SIS_Title4" status="primary">
+                                                <input type="text" nbInput fullWidth formControlName="s3_SIS_Subtitle4"  class="mt-2"
+                                                    status="primary">
+                                            </nb-card>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-md-6 mb-4">
+                                            <nb-card class="hover-line">
+                                                <input type="text" nbInput formControlName="s3_SIS_Title5" status="primary">
+                                                <input type="text" nbInput fullWidth formControlName="s3_SIS_Subtitle5"  class="mt-2"
                                                     status="primary">
                                             </nb-card>
                                         </div>
@@ -456,21 +447,21 @@
                                 <nb-card-body>
                                     <div class="row mt-4">
                                         <div class="col-md-12 text-center">
-                                            <input type="text" nbInput placeholder="Title" status="primary">
+                                            <input type="text" nbInput  formControlName="s3_SES_Title_center" status="primary">
                                         </div>
                                     </div>
                                     <div class="row mt-4">
                                         <div class="col-md-6 mb-4">
                                             <nb-card class="hover-line">
-                                                <input type="text" nbInput placeholder="Title" status="primary">
-                                                <input type="text" nbInput fullWidth placeholder="Subtitle" class="mt-2"
+                                                <input type="text" nbInput formControlName="s3_SES_Title1" status="primary">
+                                                <input type="text" nbInput fullWidth formControlName="s3_SES_Subtitle1" class="mt-2"
                                                     status="primary">
                                             </nb-card>
                                         </div>
                                         <div class="col-md-6 mb-4">
                                             <nb-card class="hover-line">
-                                                <input type="text" nbInput placeholder="Title" status="primary">
-                                                <input type="text" nbInput fullWidth placeholder="Subtitle" class="mt-2"
+                                                <input type="text" nbInput  formControlName="s3_SES_Title2" status="primary">
+                                                <input type="text" nbInput fullWidth formControlName="s3_SES_Subtitle2" class="mt-2"
                                                     status="primary">
                                             </nb-card>
                                         </div>
@@ -478,15 +469,15 @@
                                     <div class="row mt-4">
                                         <div class="col-md-6 mb-4">
                                             <nb-card class="hover-line">
-                                                <input type="text" nbInput placeholder="Title" status="primary">
-                                                <input type="text" nbInput fullWidth placeholder="Subtitle" class="mt-2"
+                                                <input type="text" nbInput formControlName="s3_SES_Title3"  status="primary">
+                                                <input type="text" nbInput fullWidth formControlName="s3_SES_Subtitle3"  class="mt-2"
                                                     status="primary">
                                             </nb-card>
                                         </div>
                                         <div class="col-md-6 mb-4">
                                             <nb-card class="hover-line">
-                                                <input type="text" nbInput placeholder="Title" status="primary">
-                                                <input type="text" nbInput fullWidth placeholder="Subtitle" class="mt-2"
+                                                <input type="text" nbInput formControlName="s3_SES_Title4"  status="primary">
+                                                <input type="text" nbInput fullWidth formControlName="s3_SES_Subtitle4"  class="mt-2"
                                                     status="primary">
                                             </nb-card>
                                         </div>
@@ -507,10 +498,10 @@
                                 <nb-card-body>
                                     <div class=" row justify-content-center align-items-center">
                                         <div class="col-12 col-md-8"> <!-- 8 columns for text (2 parts) -->
-                                            <input type="text" nbInput fullWidth status="primary" placeholder="Title">
-                                            <input type="text" nbInput fullWidth placeholder="Subtitle" class="mt-2"
+                                            <input type="text" nbInput fullWidth status="primary"  formControlName="s4_FS_Title" >
+                                            <input type="text" nbInput fullWidth  formControlName="s4_FS_Subtitle"  class="mt-2"
                                                 status="primary">
-                                            <textarea nbInput fullWidth placeholder="Enter description.." class="mt-2"
+                                            <textarea nbInput fullWidth  formControlName="s4_FS_Description"  class="mt-2"
                                                 status="primary"></textarea>
                                         </div>
                                         <div class="col-12 col-md-4"> <!-- 4 columns for image (1 part) -->
@@ -528,7 +519,7 @@
                                             placeholder="Upload File">
                                     </div>
                                     <div>
-                                        <textarea nbInput fullWidth placeholder="Enter description.." class="mt-2"
+                                        <textarea nbInput fullWidth formControlName="s4_SS_Description"  class="mt-2"
                                             status="primary"></textarea>
                                     </div>
                                 </nb-card-body>
@@ -536,8 +527,8 @@
                             <nb-card>
                                 <nb-card-header>Third section</nb-card-header>
                                 <nb-card-body>
-                                    <input type="text" nbInput fullWidth status="primary" placeholder="Title">
-                                    <textarea nbInput fullWidth placeholder="Enter description.." class="mt-2"
+                                    <input type="text" nbInput fullWidth status="primary" formControlName="s4_TS_Title">
+                                    <textarea nbInput fullWidth formControlName="s4_TS_Subtitle" class="mt-2"
                                         status="primary"></textarea>
 
                                     <div class="text-center">
@@ -559,8 +550,8 @@
                                 <nb-card-body>
                                     <div class="row p-2 justify-content-center align-items-center">
                                         <div class="col-12 col-md-4 p-2">
-                                            <input type="text" nbInput fullWidth status="primary" placeholder="Title">
-                                            <textarea nbInput fullWidth placeholder="Enter description.." class="mt-2"
+                                            <input type="text" nbInput fullWidth status="primary" formControlName="s5_FS_Title" placeholder="Title">
+                                            <textarea nbInput fullWidth formControlName="s5_FS_Description" class="mt-2"
                                                 status="primary"></textarea>
                                         </div>
 
@@ -579,12 +570,29 @@
                                             <nb-accordion multi>
                                                 <nb-accordion-item>
                                                     <nb-accordion-item-header>
-                                                        <input type="text" nbInput status="primary" placeholder="Title">
+                                                        <input type="text" nbInput status="primary" formControlName="s5_SS_Title1" placeholder="Title">
                                                     </nb-accordion-item-header>
                                                     <nb-accordion-item-body>
                                                         <div class="row justify-content-center align-items-center">
                                                             <textarea nbInput fullWidth
-                                                                placeholder="Enter description.." class="mt-2"
+                                                            formControlName="s5_SS_Description1" class="mt-2"
+                                                                status="primary"></textarea>
+
+                                                            <div class="col-12 col-md-7 p-2">
+                                                                <input type="file" nbInput status="primary" class="mt-4"
+                                                                    placeholder="Upload File">
+                                                            </div>
+                                                        </div>
+                                                    </nb-accordion-item-body>
+                                                </nb-accordion-item>
+                                                <nb-accordion-item>
+                                                    <nb-accordion-item-header>
+                                                        <input type="text" nbInput status="primary" formControlName="s5_SS_Title2">
+                                                    </nb-accordion-item-header>
+                                                    <nb-accordion-item-body>
+                                                        <div class="row justify-content-center align-items-center">
+                                                            <textarea nbInput fullWidth
+                                                            formControlName="s5_SS_Description2" class="mt-2"
                                                                 status="primary"></textarea>
                                                             <div class="col-12 col-md-7 p-2">
                                                                 <input type="file" nbInput status="primary" class="mt-4"
@@ -595,37 +603,14 @@
                                                 </nb-accordion-item>
                                                 <nb-accordion-item>
                                                     <nb-accordion-item-header>
-                                                        <input type="text" nbInput status="primary" placeholder="Title">
+                                                        <input type="text" nbInput status="primary" formControlName="s5_SS_Title3">
                                                     </nb-accordion-item-header>
                                                     <nb-accordion-item-body>
                                                         <div class="row justify-content-center align-items-center">
                                                             <textarea nbInput fullWidth
-                                                                placeholder="Enter description.." class="mt-2"
+                                                            formControlName="s5_SS_Description3" class="mt-2"
                                                                 status="primary"></textarea>
-                                                            <div class="col-12 col-md-7 p-2">
-                                                                <input type="file" nbInput status="primary" class="mt-4"
-                                                                    placeholder="Upload File">
-                                                            </div>
-                                                        </div>
-                                                    </nb-accordion-item-body>
-                                                </nb-accordion-item>
-                                                <nb-accordion-item>
-                                                    <nb-accordion-item-header>
-                                                        <input type="text" nbInput status="primary" placeholder="Title">
-                                                    </nb-accordion-item-header>
-                                                    <nb-accordion-item-body>
-                                                        <div class="row justify-content-center align-items-center">
-                                                            <div class="col-12 col-md-5 p-2 custumer_text">
-                                                                <input type="text" nbInput fullWidth
-                                                                    placeholder="Enter text.." class="mt-2"
-                                                                    status="primary">
-                                                                <input type="text" nbInput fullWidth
-                                                                    placeholder="Enter text.." class="mt-2"
-                                                                    status="primary">
-                                                                <input type="text" nbInput fullWidth
-                                                                    placeholder="Enter text.." class="mt-2"
-                                                                    status="primary">
-                                                            </div>
+                                                          
                                                             <div class="col-12 col-md-7 p-2">
                                                                 <input type="file" nbInput status="primary" class="mt-4"
                                                                     placeholder="Upload File">
@@ -639,12 +624,12 @@
                                             <nb-accordion multi>
                                                 <nb-accordion-item>
                                                     <nb-accordion-item-header>
-                                                        <input type="text" nbInput status="primary" placeholder="Title">
+                                                        <input type="text" nbInput status="primary" formControlName="s5_SS_Title4">
                                                     </nb-accordion-item-header>
                                                     <nb-accordion-item-body>
                                                         <div class="row justify-content-center align-items-center">
                                                             <textarea nbInput fullWidth
-                                                                placeholder="Enter description.." class="mt-2"
+                                                            formControlName="s5_SS_Description4" class="mt-2"
                                                                 status="primary"></textarea>
                                                             <div class="col-12 col-md-7 p-2">
                                                                 <input type="file" nbInput status="primary" class="mt-4"
@@ -655,12 +640,12 @@
                                                 </nb-accordion-item>
                                                 <nb-accordion-item>
                                                     <nb-accordion-item-header>
-                                                        <input type="text" nbInput status="primary" placeholder="Title">
+                                                        <input type="text" nbInput status="primary" formControlName="s5_SS_Title5">
                                                     </nb-accordion-item-header>
                                                     <nb-accordion-item-body>
                                                         <div class="row justify-content-center align-items-center">
                                                             <textarea nbInput fullWidth
-                                                                placeholder="Enter description.." class="mt-2"
+                                                            formControlName="s5_SS_Description5" class="mt-2"
                                                                 status="primary"></textarea>
                                                             <div class="col-12 col-md-7 p-2">
                                                                 <input type="file" nbInput status="primary" class="mt-4"
@@ -671,12 +656,12 @@
                                                 </nb-accordion-item>
                                                 <nb-accordion-item>
                                                     <nb-accordion-item-header>
-                                                        <input type="text" nbInput status="primary" placeholder="Title">
+                                                        <input type="text" nbInput status="primary" formControlName="s5_SS_Title6">
                                                     </nb-accordion-item-header>
                                                     <nb-accordion-item-body>
                                                         <div class="row justify-content-center align-items-center">
                                                             <textarea nbInput fullWidth
-                                                                placeholder="Enter description.." class="mt-2"
+                                                            formControlName="s5_SS_Description6" class="mt-2"
                                                                 status="primary"></textarea>
                                                             <div class="col-12 col-md-7 p-2">
                                                                 <input type="file" nbInput status="primary" class="mt-4"
@@ -698,9 +683,10 @@
                         </nb-step>
                         <nb-step [label]="labelSix">
                             <ng-template #labelSix> What would happen if...?</ng-template>
-                            <input type="text" nbInput fullWidth status="primary" placeholder="Title">
-                            <input type="text" nbInput fullWidth placeholder="Subtitle" class="mt-4 mb-3"
-                                status="primary">
+                            <input type="text" nbInput fullWidth status="primary"  formControlName="s6_Title">
+                            <h5 class="mt-4 mb-3 text-center">Risk management scenarios and solutions Team misalignment
+                            </h5>
+
                                 <nb-card>
                                     <nb-card-header>First section</nb-card-header>
     
@@ -711,7 +697,7 @@
                                                     Problem
                                                 </nb-card-header>
                                                 <nb-card-body>
-                                                    <textarea nbInput fullWidth placeholder="Enter description.."
+                                                    <textarea nbInput fullWidth formControlName="s6_FS_Description_prob1"
                                                         class="mt-2" status="primary"></textarea>
                                                 </nb-card-body>
                                             </nb-card>
@@ -721,15 +707,15 @@
                                                     Solution
                                                 </nb-card-header>
                                                 <nb-card-body>
-                                                    <textarea nbInput fullWidth placeholder="Enter description.."
+                                                    <textarea nbInput fullWidth formControlName="s6_FS_Description6_solu1"
                                                         class="mt-2" status="primary"></textarea>
                                                 </nb-card-body>
                                             </nb-card>
                                     </nb-card-body>
                                 </nb-card>
-                            <h5 class="mt-4 mb-3 text-center"> <input type="text" nbInput fullWidth status="primary"
-                                    placeholder="Title">
-                            </h5>
+                                <h5 class="mt-4 mb-3 text-center">Lack of management support</h5>
+
+                          
                             <nb-card>
                                 <nb-card-header>Second section</nb-card-header>
 
@@ -740,8 +726,7 @@
                                                 Problem
                                             </nb-card-header>
                                             <nb-card-body>
-                                                <textarea nbInput fullWidth placeholder="Enter description.."
-                                                    class="mt-2" status="primary"></textarea>
+                                                <textarea nbInput fullWidth formControlName="s6_SS_Description_prob2"  class="mt-2" status="primary"></textarea>
                                             </nb-card-body>
                                         </nb-card>
                                         <nb-card class="hover-line">
@@ -750,15 +735,15 @@
                                                 Solution
                                             </nb-card-header>
                                             <nb-card-body>
-                                                <textarea nbInput fullWidth placeholder="Enter description.."
+                                                <textarea nbInput fullWidth formControlName="s6_SS_Description6_solu2"
                                                     class="mt-2" status="primary"></textarea>
                                             </nb-card-body>
                                         </nb-card>
                                 </nb-card-body>
                             </nb-card>
 
-                            <h5 class="mt-4 mb-3 text-center"><input type="text" nbInput fullWidth status="primary"
-                                    placeholder="Title"></h5>
+                            <h5 class="mt-4 mb-3 text-center">Resistance to change
+                            </h5>
                             <nb-card>
                                 <nb-card-header>Third section</nb-card-header>
 
@@ -769,7 +754,7 @@
                                                 Problem
                                             </nb-card-header>
                                             <nb-card-body>
-                                                <textarea nbInput fullWidth placeholder="Enter description.."
+                                                <textarea nbInput fullWidth formControlName="s6_TS_Description_prob3"
                                                     class="mt-2" status="primary"></textarea>
                                             </nb-card-body>
                                         </nb-card>
@@ -779,15 +764,13 @@
                                                 Solution
                                             </nb-card-header>
                                             <nb-card-body>
-                                                <textarea nbInput fullWidth placeholder="Enter description.."
+                                                <textarea nbInput fullWidth formControlName="s6_TS_Description6_solu3"
                                                     class="mt-2" status="primary"></textarea>
                                             </nb-card-body>
                                         </nb-card>
                                 </nb-card-body>
                             </nb-card>
-
-                            <h5 class="mt-4 mb-3 text-center"><input type="text" nbInput fullWidth status="primary"
-                                    placeholder="Title"></h5>
+                            <h5 class="mt-4 mb-3 text-center">Failure to achieve objectives </h5>
                             <nb-card>
                                 <nb-card-header>Fourth  section</nb-card-header>
 
@@ -798,7 +781,8 @@
                                                 Problem
                                             </nb-card-header>
                                             <nb-card-body>
-                                                <textarea nbInput fullWidth placeholder="Enter description.."
+                                                <textarea nbInput fullWidth formControlName="s6_FOS_Description_prob4"
+
                                                     class="mt-2" status="primary"></textarea>
                                             </nb-card-body>
                                         </nb-card>
@@ -808,7 +792,7 @@
                                                 Solution
                                             </nb-card-header>
                                             <nb-card-body>
-                                                <textarea nbInput fullWidth placeholder="Enter description.."
+                                                <textarea nbInput fullWidth formControlName="s6_FOS_Description6_solu4"
                                                     class="mt-2" status="primary"></textarea>
                                             </nb-card-body>
                                         </nb-card>
@@ -837,7 +821,8 @@
                             <nb-card>
                                 <nb-card-header>Footer section</nb-card-header>
                                 <nb-card-body>
-                                    <textarea nbInput fullWidth placeholder="Enter description.." class="mt-2" status="primary"></textarea>
+                                    <textarea nbInput fullWidth  formControlName="footer_Desc" class="mt-2" status="primary"> </textarea>
+
                                 </nb-card-body>
                               </nb-card>
                         </div>

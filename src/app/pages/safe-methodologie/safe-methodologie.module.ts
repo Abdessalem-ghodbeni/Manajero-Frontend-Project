@@ -5,16 +5,18 @@ import { SAFeMethodologieRoutingModule } from './safe-methodologie-routing.modul
 import { DemoSAFeComponent } from './demo-safe/demo-safe.component';
  
 import { NbThemeModule, NbLayoutModule, NbCardModule, NbButtonModule, NbIconModule ,NbStepperModule,NbAccordionModule } from '@nebular/theme';
-import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { SafeMethodologiePresentationComponent } from './safe-methodologie-presentation/safe-methodologie-presentation.component';
 import { UpdateDemoComponent } from './update-demo/update-demo.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SafeProcessComponent } from './safe-process/safe-process.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
  
 @NgModule({
   declarations: [
     DemoSAFeComponent,
     SafeMethodologiePresentationComponent,
     UpdateDemoComponent,
+    SafeProcessComponent,
  
   ],
   imports: [
@@ -26,13 +28,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NbButtonModule,
     NbAccordionModule ,
     NbIconModule,
-    NbEvaIconsModule,
     NbStepperModule,
     NbWindowModule,
     SAFeMethodologieRoutingModule,
     NbInputModule ,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DragDropModule
+
   ]
 })
 export class SAFeMethodologieModule { }

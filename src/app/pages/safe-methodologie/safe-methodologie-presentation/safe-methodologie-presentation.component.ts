@@ -35,7 +35,9 @@ export class SafeMethodologiePresentationComponent implements OnInit {
       }
     );
   }
-  
+  goToSafeProcess() {
+    this.router.navigate(['/pages/safe/safe-process']);
+  }
 }
 
 
