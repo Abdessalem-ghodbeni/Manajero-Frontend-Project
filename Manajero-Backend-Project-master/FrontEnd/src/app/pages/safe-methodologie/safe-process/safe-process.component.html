@@ -1,0 +1,407 @@
+<div class="tab-container">
+  <input
+    type="radio"
+    name="tab"
+    id="tab1"
+    class="tab tab--1"
+    [checked]="selectedTab === 1"
+    (change)="selectTab(1)"
+  />
+  <label class="tab_label" for="tab1">Dashboard</label>
+
+  <input
+    type="radio"
+    name="tab"
+    id="tab2"
+    class="tab tab--2"
+    [checked]="selectedTab === 2"
+    (change)="selectTab(2)"
+  />
+  <label class="tab_label" for="tab2">Sprints</label>
+
+  <input
+    type="radio"
+    name="tab"
+    id="tab3"
+    class="tab tab--3"
+    [checked]="selectedTab === 3"
+    (change)="selectTab(3)"
+  />
+  <label class="tab_label" for="tab3">Calendar</label>
+
+  <input
+    type="radio"
+    name="tab"
+    id="tab4"
+    class="tab tab--4"
+    [checked]="selectedTab === 4"
+    (change)="selectTab(4)"
+  />
+  <label class="tab_label" for="tab4">Meetings</label>
+
+  <input
+    type="radio"
+    name="tab"
+    id="tab5"
+    class="tab tab--5"
+    [checked]="selectedTab === 5"
+    (change)="selectTab(5)"
+  />
+  <label class="tab_label" for="tab5">Sprint Planning</label>
+
+  <div class="indicator"></div>
+</div>
+
+<div class="tab-content">
+  <nb-card *ngIf="selectedTab === 1">Dashboard Content</nb-card>
+
+  <div *ngIf="selectedTab === 2" class="card-container">
+    <nb-card class="cardcontainer">
+      <div class="task-container">
+        <div
+          class="task-column"
+          cdkDropList
+          id="backlogTasks"
+          [cdkDropListConnectedTo]="connectedDropLists"
+          (cdkDropListDropped)="drop($event)"
+        >
+        <h3>Backlog</h3>
+        <div class="task-input-container">
+          <div class="input-group">
+            <label for="taskTitle">Title</label>
+            <input
+              nbInput
+              id="taskTitle"
+              placeholder="Title"
+              [(ngModel)]="newTaskTitle"
+              class="task-input"
+            />
+          </div>
+          <div class="input-group">
+            <label for="taskDescription">Description</label>
+            <input
+              nbInput
+              id="taskDescription"
+              placeholder="Description"
+              [(ngModel)]="newTaskDescription"
+              class="task-input"
+            />
+          </div>
+          <div class="input-group">
+            <label for="startDate">Start Date</label>
+            <input
+              type="date"
+              id="startDate"
+              [(ngModel)]="startDate"
+              class="task-input"
+            />
+          </div>
+          <div class="input-group">
+            <label for="endDate">End Date</label>
+            <input
+              type="date"
+              id="endDate"
+              [(ngModel)]="endDate"
+              class="task-input"
+            />
+          </div>
+          <div class="input-group">
+            <label for="taskAssignee">Assignee</label>
+            <input
+              nbInput
+              id="taskAssignee"
+              placeholder="Assignee"
+              [(ngModel)]="newTaskAssignee"
+              class="task-input"
+            />
+          </div>
+          
+          <!-- Display different button labels based on editing state -->
+          <button nbButton status="primary" (click)="saveTask()">
+            {{ isEditing ? 'Update Task' : 'Add Task' }}
+          </button>
+          
+          <div class="button-container">
+            <button type="button" class="addbutton"  (click)="sendTasksToApi()">
+              <span class="button__text">Add backlog</span>
+              <span class="button__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg">
+                  <line y2="19" y1="5" x2="12" x1="12"></line>
+                  <line y2="12" y1="12" x2="19" x1="5"></line>
+                </svg>
+              </span>
+            </button>
+            <button type="button" class="addbutton">
+              <span class="button__text">Add Sprint</span>
+              <span class="button__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg">
+                  <line y2="19" y1="5" x2="12" x1="12"></line>
+                  <line y2="12" y1="12" x2="19" x1="5"></line>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+        
+          <nb-card class="task-card" *ngFor="let task of backlogTasks" cdkDrag>
+            <div class="card__content">
+              <div class="card__title">{{ task.title }}</div>
+              <div class="card__menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="4" viewBox="0 0 4 20" height="20" fill="none" (click)="toggleMenu(task._id)">
+                  <g fill="#000">
+                    <path d="m2 4c1.10457 0 2-.89543 2-2s-.89543-2-2-2-2 .89543-2 2 .89543 2 2 2z"></path>
+                    <path d="m2 12c1.10457 0 2-.8954 2-2 0-1.10457-.89543-2-2-2s-2 .89543-2 2c0 1.1046.89543 2 2 2z"></path>
+                    <path d="m2 20c1.10457 0 2-.8954 2-2s-.89543-2-2-2-2 .8954-2 2 .89543 2 2 2z"></path>
+                  </g>
+                </svg>
+                <div class="menu-options" *ngIf="menuVisibility[task._id]">
+                  <button (click)="deleteTask(task)" style="color: red; ">DELETE</button>
+                  <button (click)="editTask(task)" style="color: orange;">EDIT</button>                  
+                </div>
+              </div>
+            </div>
+          </nb-card>
+          
+          
+          
+          
+        </div>
+
+        <div
+          class="task-column"
+          cdkDropList
+          id="sprint1Tasks"
+          [cdkDropListConnectedTo]="connectedDropLists"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <h3>Sprint 1</h3>
+          <nb-card class="task-card" *ngFor="let task of sprint1Tasks" cdkDrag>
+            <div class="card__content">
+              <div class="card__title">{{ task.title }}</div>
+              <div class="card__menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="4" viewBox="0 0 4 20" height="20" fill="none" (click)="toggleMenu(task._id)">
+                  <g fill="#000">
+                    <path d="m2 4c1.10457 0 2-.89543 2-2s-.89543-2-2-2-2 .89543-2 2 .89543 2 2 2z"></path>
+                    <path d="m2 12c1.10457 0 2-.8954 2-2 0-1.10457-.89543-2-2-2s-2 .89543-2 2c0 1.1046.89543 2 2 2z"></path>
+                    <path d="m2 20c1.10457 0 2-.8954 2-2s-.89543-2-2-2-2 .8954-2 2 .89543 2 2 2z"></path>
+                  </g>
+                </svg>
+                <div class="menu-options" *ngIf="menuVisibility[task._id]">
+                  <button (click)="deleteTask(task)" style="color: red; ">DELETE</button>
+                  <button (click)="editTask(task)" style="color: orange;">EDIT</button>                  
+                </div>
+              </div>
+            </div>      
+           </nb-card>
+        </div>
+
+        <div
+          class="task-column"
+          cdkDropList
+          id="inProgressTasks"
+          [cdkDropListConnectedTo]="connectedDropLists"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <h3>In Progress</h3>
+          <nb-card
+            class="task-card"
+            *ngFor="let task of inProgressTasks"
+            cdkDrag
+          >
+          <div class="card__content">
+            <div class="card__title">{{ task.title }}</div>
+            <div class="card__menu">
+              <svg xmlns="http://www.w3.org/2000/svg" width="4" viewBox="0 0 4 20" height="20" fill="none" (click)="toggleMenu(task._id)">
+                <g fill="#000">
+                  <path d="m2 4c1.10457 0 2-.89543 2-2s-.89543-2-2-2-2 .89543-2 2 .89543 2 2 2z"></path>
+                  <path d="m2 12c1.10457 0 2-.8954 2-2 0-1.10457-.89543-2-2-2s-2 .89543-2 2c0 1.1046.89543 2 2 2z"></path>
+                  <path d="m2 20c1.10457 0 2-.8954 2-2s-.89543-2-2-2-2 .8954-2 2 .89543 2 2 2z"></path>
+                </g>
+              </svg>
+              <div class="menu-options" *ngIf="menuVisibility[task._id]">
+                <button (click)="deleteTask(task)" style="color: red; ">DELETE</button>
+                <button (click)="editTask(task)" style="color: orange;">EDIT</button>                  
+              </div>
+            </div>
+          </div>
+        
+              </nb-card>
+        </div>
+
+        <div
+          class="task-column"
+          cdkDropList
+          id="doneTasks"
+          [cdkDropListConnectedTo]="connectedDropLists"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <h3>DONE</h3>
+          <nb-card class="task-card" *ngFor="let task of doneTasks" cdkDrag>
+            <div class="card__content">
+              <div class="card__title">{{ task.title }}</div>
+              <div class="card__menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="4" viewBox="0 0 4 20" height="20" fill="none" (click)="toggleMenu(task._id)">
+                  <g fill="#000">
+                    <path d="m2 4c1.10457 0 2-.89543 2-2s-.89543-2-2-2-2 .89543-2 2 .89543 2 2 2z"></path>
+                    <path d="m2 12c1.10457 0 2-.8954 2-2 0-1.10457-.89543-2-2-2s-2 .89543-2 2c0 1.1046.89543 2 2 2z"></path>
+                    <path d="m2 20c1.10457 0 2-.8954 2-2s-.89543-2-2-2-2 .8954-2 2 .89543 2 2 2z"></path>
+                  </g>
+                </svg>
+                <div class="menu-options" *ngIf="menuVisibility[task._id]">
+                  <button (click)="deleteTask(task)" style="color: red; ">DELETE</button>
+                  <button (click)="editTask(task)" style="color: orange;">EDIT</button>                  
+                </div>
+              </div>
+            </div>
+                   </nb-card>
+        </div>
+
+        <div
+          class="task-column"
+          cdkDropList
+          id="inTestTasks"
+          [cdkDropListConnectedTo]="connectedDropLists"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <h3>In Test</h3>
+          <nb-card class="task-card" *ngFor="let task of inTestTasks" cdkDrag>
+            <div class="card__content">
+              <div class="card__title">{{ task.title }}</div>
+              <div class="card__menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="4" viewBox="0 0 4 20" height="20" fill="none" (click)="toggleMenu(task._id)">
+                  <g fill="#000">
+                    <path d="m2 4c1.10457 0 2-.89543 2-2s-.89543-2-2-2-2 .89543-2 2 .89543 2 2 2z"></path>
+                    <path d="m2 12c1.10457 0 2-.8954 2-2 0-1.10457-.89543-2-2-2s-2 .89543-2 2c0 1.1046.89543 2 2 2z"></path>
+                    <path d="m2 20c1.10457 0 2-.8954 2-2s-.89543-2-2-2-2 .8954-2 2 .89543 2 2 2z"></path>
+                  </g>
+                </svg>
+                <div class="menu-options" *ngIf="menuVisibility[task._id]">
+                  <button (click)="deleteTask(task)" style="color: red; ">DELETE</button>
+                  <button (click)="editTask(task)" style="color: orange;">EDIT</button>                  
+                </div>
+              </div>
+            </div>
+                   </nb-card>
+        </div>
+
+        <div
+          class="task-column"
+          cdkDropList
+          id="toRedoTasks"
+          [cdkDropListConnectedTo]="connectedDropLists"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <h3>TO REDO</h3>
+          <nb-card class="task-card" *ngFor="let task of toRedoTasks" cdkDrag>
+            <div class="card__content">
+              <div class="card__title">{{ task.title }}</div>
+              <div class="card__menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="4" viewBox="0 0 4 20" height="20" fill="none" (click)="toggleMenu(task._id)">
+                  <g fill="#000">
+                    <path d="m2 4c1.10457 0 2-.89543 2-2s-.89543-2-2-2-2 .89543-2 2 .89543 2 2 2z"></path>
+                    <path d="m2 12c1.10457 0 2-.8954 2-2 0-1.10457-.89543-2-2-2s-2 .89543-2 2c0 1.1046.89543 2 2 2z"></path>
+                    <path d="m2 20c1.10457 0 2-.8954 2-2s-.89543-2-2-2-2 .8954-2 2 .89543 2 2 2z"></path>
+                  </g>
+                </svg>
+                <div class="menu-options" *ngIf="menuVisibility[task._id]">
+                  <button (click)="deleteTask(task)" style="color: red; ">DELETE</button>
+                  <button (click)="editTask(task)" style="color: orange;">EDIT</button>                  
+                </div>
+              </div>
+            </div>
+                   </nb-card>
+        </div>
+
+        <div
+          class="task-column"
+          cdkDropList
+          id="toImproveTasks"
+          [cdkDropListConnectedTo]="connectedDropLists"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <h3>To Improve</h3>
+          <nb-card
+            class="task-card"
+            *ngFor="let task of toImproveTasks"
+            cdkDrag
+          >
+          <div class="card__content">
+            <div class="card__title">{{ task.title }}</div>
+            <div class="card__menu">
+              <svg xmlns="http://www.w3.org/2000/svg" width="4" viewBox="0 0 4 20" height="20" fill="none" (click)="toggleMenu(task._id)">
+                <g fill="#000">
+                  <path d="m2 4c1.10457 0 2-.89543 2-2s-.89543-2-2-2-2 .89543-2 2 .89543 2 2 2z"></path>
+                  <path d="m2 12c1.10457 0 2-.8954 2-2 0-1.10457-.89543-2-2-2s-2 .89543-2 2c0 1.1046.89543 2 2 2z"></path>
+                  <path d="m2 20c1.10457 0 2-.8954 2-2s-.89543-2-2-2-2 .8954-2 2 .89543 2 2 2z"></path>
+                </g>
+              </svg>
+              <div class="menu-options" *ngIf="menuVisibility[task._id]">
+                <button (click)="deleteTask(task)" style="color: red; ">DELETE</button>
+                <button (click)="editTask(task)" style="color: orange;">EDIT</button>                  
+              </div>
+            </div>
+          </div>
+                 </nb-card>
+        </div>
+      </div>
+    </nb-card>
+  </div>
+
+  <nb-card *ngIf="selectedTab === 3">Calendar Content</nb-card>
+  <nb-card *ngIf="selectedTab === 4">Meetings Content</nb-card>
+  <nb-card *ngIf="selectedTab === 5">Sprint Planning Content</nb-card>
+</div>
+
+<!-- <nb-card class="card card--1">
+            Project Backlog
+        </nb-card>
+        <nb-card class="card card--2">
+            <div class="cardsprint">
+                <div class="card-details">
+                  <p class="text-title">Sprint Backlog</p>
+                  <p class="text-body">Click to Add a Sprint</p>
+                </div>
+                <button class="card-button">Add Sprint</button>
+              </div>
+              <div class="mt-5">
+                <nb-accordion>
+                    <nb-accordion-item>
+                        <nb-accordion-item-header class="accordion-header">
+                            Sprint 1
+                            <button nbButton ghost status="warning" (click)="editSprint(1, $event)" class="edit-button">
+                                <nb-icon icon="edit"></nb-icon>
+                            </button>
+                            <div *ngIf="isEditing" class="edit-inputs">
+                                <input nbInput placeholder="Start Date" [(ngModel)]="startDate" />
+                                <input nbInput placeholder="End Date" [(ngModel)]="endDate" />
+                            </div>
+                        </nb-accordion-item-header>
+                        <nb-accordion-item-body>
+                            <div class="task-container">
+                                <div class="task-column">
+                                    <h3>TO DO</h3>
+                                    <nb-card class="task-card">
+                                        <div class="card__title">Task 1</div>
+                                    </nb-card>
+                                </div>
+                                <div class="task-column">
+                                    <h3>In Progress</h3>
+                                    <nb-card class="task-card">
+                                        <div class="card__title">Task 1</div>
+                                    </nb-card>
+                                </div>
+                                <div class="task-column">
+                                    <h3>Done</h3>
+                                    <nb-card class="task-card">
+                                        <div class="card__title">Task 1</div>
+                                    </nb-card>
+                                </div>
+                            </div>
+                        </nb-accordion-item-body>
+                    </nb-accordion-item>
+                </nb-accordion>
+                
+                  
+              </div>
+
+        </nb-card>  -->

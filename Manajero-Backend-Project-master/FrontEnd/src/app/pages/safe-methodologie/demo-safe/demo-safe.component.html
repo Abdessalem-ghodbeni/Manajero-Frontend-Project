@@ -1,0 +1,1254 @@
+<nb-layout>
+  <nb-layout-header>
+    <nb-icon icon="layers-outline"></nb-icon>
+    <span class="header-title">Présentation de la Méthodologie SAFe Agile</span>
+  </nb-layout-header>
+
+  <nb-layout-column>
+    <div class="row mb-5">
+      <div class="col-md-12">
+        <h1 class="main-title animated-title">
+          <span>S</span><span>A</span><span>F</span><span>e</span> <span>M</span
+          ><span>é</span><span>t</span><span>h</span><span>o</span><span>d</span
+          ><span>o</span><span>l</span><span>o</span><span>g</span><span>i</span
+          ><span>e</span>
+        </h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header
+            class="d-flex justify-content-between align-items-center"
+          >
+            <img
+              src="assets/images/safee.webp"
+              class="img-fluid custumer_logoSafe"
+              alt=""
+            />
+            <h2 class="title text-center">
+              Qu'est-ce que SAFe
+              <nb-icon icon="question-mark-circle" status="info"></nb-icon>
+              <nb-icon icon="question-mark-circle" status="info"></nb-icon>
+              <nb-icon icon="question-mark-circle" status="info"></nb-icon>
+            </h2>
+            <img
+              src="assets/images/safe.png"
+              class="img-fluid custumer_logoSafe"
+              alt=""
+            />
+          </nb-card-header>
+          <nb-card-body>
+            <div class="d-flex text-danger">
+              <p class="safe_description">
+                <strong> Le Scaled Agile Framework (SAFe)</strong> est une
+                méthodologie qui aide les grandes organisations à adopter les
+                principes de l'agilité à l'échelle. <br />
+                <span *ngIf="showFullDescription">
+                  SAFe Scrum est une méthode Agile utilisée par les équipes au
+                  sein d'un ART pour offrir de la valeur client dans un court
+                  laps de temps. Les équipes SAFe Scrum utilisent des
+                  itérations, des systèmes Kanban et des événements Scrum pour
+                  planifier, exécuter, démontrer et rétrospecter leur travail.
+                  De nombreuses équipes utilisent SAFe Scrum comme processus
+                  principal d'équipe Agile. Cependant, ils ne se limitent pas à
+                  Scrum et peuvent également utiliser SAFe Team Kanban.
+                  Cependant, toutes les équipes SAFe appliquent des techniques
+                  de qualité intégrées et d'autres pratiques et activités non
+                  définies dans Scrum. Les équipes SAFe Scrum coopèrent avec
+                  d'autres équipes Agile et parties prenantes d'ART, créant et
+                  déployant des solutions qui profitent à ses clients. Cet
+                  article décrit comment les équipes Agile appliquent SAFe
+                  Scrum.
+                  <div class="text-center mt-5">
+                    <div class="video-container">
+                      <iframe
+                        src=" assets/images/WhatsApp Video 2024-06-17 at 23.03.06.mp4"
+                        title=" video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; 
+                                clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      >
+                      </iframe>
+                    </div>
+                  </div>
+                </span>
+              </p>
+              <strong
+                class="mx-2 mt-2 custumer_showMore"
+                (click)="toggleDescription()"
+                *ngIf="!showFullDescription"
+              >
+                Plus...
+              </strong>
+            </div>
+            <p class="safe_description mt-4">
+              <span *ngIf="showFullDescription">
+                Les équipes agiles appliquant SAFe Scrum suivent une cadence
+                régulière d'événements pour atteindre un objectif commun,
+                apportant de la valeur à l'entreprise et à ses clients. Les
+                équipes ont l'autorité et l'autonomie nécessaires pour
+                planifier, exécuter et gérer leur travail, prendre des décisions
+                dans les limites de leur champ d'action et s'adapter aux
+                conditions changeantes de la meilleure manière qu'elles jugent
+                appropriée. Le principe SAFe n°9, décentraliser la prise de
+                décision , garantit l'alignement et favorise une direction de
+                gestion subtile et minimale pour les équipes SAFe Scrum. ©
+                Scaled Agile, Inc. Include this copyright notice with the copied
+                content. Read the FAQs on how to use SAFe content and trademarks
+                here:
+                <a
+                  href="https://www.scaledagile.com/about/about-us/permissions-faq/"
+                  >https://www.scaledagile.com/about/about-us/permissions-faq/</a
+                >
+              </span>
+            </p>
+            <strong
+              class="custumer_showMore text-danger"
+              (click)="toggleDescription()"
+              *ngIf="showFullDescription"
+            >
+              Moins...
+            </strong>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header class="text-center">
+            <h2 class="title">
+              Pourquoi SAFe
+              <nb-icon icon="question-mark-circle" status="info"></nb-icon>
+              <nb-icon icon="question-mark-circle" status="info"></nb-icon>
+              <nb-icon icon="question-mark-circle" status="info"></nb-icon>
+            </h2>
+          </nb-card-header>
+          <nb-card-body>
+            <div class="row advantages-inconvenients mt-4">
+              <div class="col-11 mx-5 my-4">
+                <p class="text-center">
+                  <strong>
+                    SAFe® est-il le framework le plus utilisé au monde pour
+                    l'agilité des entreprises ? Obtenez la réponse du créateur
+                    de SAFe, Dean Leffingwell dans cette vidéo de 18 minutes.
+                    Dean partage les résultats réels obtenus par certaines des
+                    plus grandes entreprises mondiales, notamment American
+                    Express, Bosch, Porsche, Lockheed Martin, Pepsico et
+                    d'autres.
+                  </strong>
+                </p>
+              </div>
+              <div class="col-12 col-md-5 p-2 mx-2">
+                <h4>Avantages</h4>
+
+                <p class="mt-3 mb-4">
+                  <strong
+                    >La méthodologie SAFe (Scaled Agile Framework) présente
+                    plusieurs avantages notables pour les organisations
+                    cherchant à adopter l'agilité à grande échelle :</strong
+                  >
+                </p>
+                <ul>
+                  <li class="my-3">
+                    <nb-icon icon="checkmark-circle" status="success"></nb-icon>
+                    Facilite la collaboration entre grandes équipes
+                  </li>
+                  <li class="my-3">
+                    <nb-icon icon="checkmark-circle" status="success"></nb-icon>
+                    Améliore la transparence et la visibilité des projets
+                  </li>
+                  <li class="my-3">
+                    <nb-icon icon="checkmark-circle" status="success"></nb-icon>
+                    Permet une meilleure gestion des dépendances
+                  </li>
+                  <li class="my-3">
+                    <nb-icon icon="checkmark-circle" status="success"></nb-icon>
+                    Favorise l'amélioration continue
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 col-md-5 offset-md-1 p-2">
+                <h4>Inconvénients</h4>
+                <p class="mt-3 mb-4">
+                  <strong
+                    >Malgré ses nombreux avantages, SAFe présente également
+                    certains inconvénients qui doivent être pris en compte
+                    :</strong
+                  >
+                </p>
+                <ul>
+                  <li class="my-3">
+                    <nb-icon icon="close" status="danger"></nb-icon>
+                    Peut être complexe à mettre en place initialement
+                  </li>
+                  <li class="my-3">
+                    <nb-icon icon="close" status="danger"></nb-icon>
+                    Nécessite un engagement important de la direction
+                  </li>
+                  <li class="my-3">
+                    <nb-icon icon="close" status="danger"></nb-icon>
+                    Peut entraîner une rigidité si mal appliqué
+                  </li>
+                  <li class="my-3">
+                    <nb-icon icon="close" status="danger"></nb-icon>
+                    Peut être coûteux en termes de formation et de ressources
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header
+            class="d-flex justify-content-center align-items-center"
+          >
+            <img
+              src="assets/images/safee.webp"
+              class="img-fluid custumer_logoSafe"
+              alt=""
+            />
+            <h2 class="title text-center">
+              Cycle de vie de SAFe
+              <nb-icon icon="question-mark-circle" status="info"></nb-icon>
+              <nb-icon icon="question-mark-circle" status="info"></nb-icon>
+              <nb-icon icon="question-mark-circle" status="info"></nb-icon>
+            </h2>
+          </nb-card-header>
+          <nb-card-body>
+            <p>
+              <strong
+                >Les sections suivantes donnent un aperçu de ce cycle.
+              </strong>
+            </p>
+
+            <div class="text-center p-2 mt-5">
+              <img
+                src="assets/images/cycle-vie.png"
+                class="img-fluid w-75"
+                alt=""
+              />
+            </div>
+
+            <nb-accordion>
+              <nb-accordion-item>
+                <nb-accordion-item-header
+                  >Team Backlog
+                </nb-accordion-item-header>
+                <nb-accordion-item-body>
+                  <div class="row justify-content-center align-items-center">
+                    <div class="col-12 ms-2 col-md-4 safe_description">
+                      <strong> Le Team Backlog</strong> contient tous les
+                      travaux à venir nécessaires pour faire progresser la
+                      solution. La majeure partie du travail est capturée par
+                      des user stories, mais d'autres travaux et activités (par
+                      exemple, formation, support) peuvent également être
+                      inclus. Le backlog des équipes aura été partiellement
+                      comblé lors du PI Planning et les équipes auront établi
+                      leurs objectifs PI . Les équipes affinent continuellement
+                      le backlog pour s'assurer qu'il contient toujours des
+                      histoires prêtes à être mises en œuvre sans risque ni
+                      surprise significatifs. Lors de l'affinement du backlog,
+                      les équipes examinent les user stories et les
+                      fonctionnalités (Features) à venir (le cas échéant) pour
+                      définir, discuter, estimer et établir des critères
+                      d'acceptation pour les prochains éléments du backlog . Le
+                      raffinement du backlog est un processus continu tout au
+                      long de l’itération.
+                    </div>
+                    <div class="col-12 offset-md-1 col-md-6">
+                      <img
+                        src=" assets/images/backlog.jpg"
+                        class="img-fluid w-100"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </nb-accordion-item-body>
+              </nb-accordion-item>
+            </nb-accordion>
+
+            <nb-accordion class="mt-3">
+              <nb-accordion-item>
+                <nb-accordion-item-header
+                  >Les itérations (Sprints)
+                </nb-accordion-item-header>
+                <nb-accordion-item-body>
+                  <div class="row justify-content-center align-items-center">
+                    <div class="col-12 ms-2 col-md-4">
+                      <img
+                        src=" assets/images/iteration.png"
+                        class="img-fluid w-100"
+                        alt=""
+                      />
+                    </div>
+                    <div class="col-12 col-md-6 safe_description text-center">
+                      <strong> Les itérations (Sprints)</strong>
+                      <br />
+                      sont le battement de cœur de Scrum et créent un rythme de
+                      travail dans le plus grand délai PI. Tout le travail
+                      nécessaire pour réaliser l'itération, y compris la
+                      planification, la synchronisation de l'équipe, l'examen
+                      des itérations et la rétrospective, s'effectue au sein des
+                      itérations. Chaque itération est une période standard de
+                      durée fixe, généralement d’une durée de deux semaines.
+                      L’équipe fournit des incréments de valeur de haute qualité
+                      au cours de l’itération sous forme de logiciels
+                      fonctionnels et testés, de solutions ou d’autres artefacts
+                      précieux. Les itérations sont continues et séquentielles,
+                      et une nouvelle itération commence immédiatement après la
+                      précédente.
+                    </div>
+                  </div>
+                </nb-accordion-item-body>
+              </nb-accordion-item>
+            </nb-accordion>
+
+            <nb-accordion class="mt-3">
+              <nb-accordion-item>
+                <nb-accordion-item-header
+                  >Planification des Sprints
+                </nb-accordion-item-header>
+                <nb-accordion-item-body>
+                  <div class="container mt-4">
+                    <h5
+                      class="mb-4 me-3 custumer-color-title-planification-sprint"
+                    >
+                      C'est quoi planification des Sprints
+                      <nb-icon
+                        icon="question-mark-circle"
+                        status="info"
+                      ></nb-icon>
+                      <nb-icon
+                        icon="question-mark-circle"
+                        status="info"
+                      ></nb-icon>
+                      <nb-icon
+                        icon="question-mark-circle"
+                        status="info"
+                      ></nb-icon>
+                    </h5>
+                    <p class="text-justify mt-2">
+                      <strong> La planification des itérations</strong> est le
+                      premier événement de l'itération, généralement facilité
+                      par le Scrum Master ou le Team Coach. Tous les membres de
+                      l'équipe collaborent pour déterminer quelles parties du
+                      backlog de l'équipe peuvent être réalisées au cours de
+                      l'itération à venir. Le plan résultant est enregistré dans
+                      le backlog d'itération.
+                    </p>
+                    <h6
+                      class="my-4 me-3 custumer-color-title-planification-sprint"
+                    >
+                      Participants et Préparation
+                    </h6>
+                    <ul class="list-unstyled">
+                      <li class="my-3">
+                        <nb-icon icon="person-outline" class="mx-2"></nb-icon>
+                        <strong>Product Owner</strong> : S'assure que les
+                        participants sont prêts à discuter des éléments les plus
+                        critiques du backlog et de leur alignement avec les
+                        objectifs de l'itération et les objectifs PI.
+                      </li>
+                      <li class="my-3">
+                        <nb-icon icon="people-outline" class="mx-2"></nb-icon>
+                        <strong>Équipe Scrum</strong> : Peut inviter d'autres
+                        personnes pour des conseils supplémentaires.
+                      </li>
+                    </ul>
+
+                    <h6
+                      class="my-4 me-3 custumer-color-title-planification-sprint"
+                    >
+                      Objectifs de la Planification des Itérations
+                    </h6>
+                    <ul class="list-unstyled">
+                      <li class="my-3">
+                        <nb-icon icon="award-outline" class="mx-2"></nb-icon>
+                        <strong>Valeur de l'itération</strong> : Pourquoi cette
+                        itération est-elle précieuse ?
+                      </li>
+                      <li class="my-3">
+                        <nb-icon icon="cube-outline" class="mx-2"></nb-icon>
+                        <strong>Contenu de l'itération</strong> : Que peut-on
+                        faire dans cette itération ?
+                      </li>
+                      <li class="my-3">
+                        <nb-icon
+                          class="mx-2"
+                          icon="settings-2-outline"
+                        ></nb-icon>
+                        <strong>Planification des travaux</strong> : Comment se
+                        dérouleront les travaux et comment seront-ils réalisés ?
+                      </li>
+                    </ul>
+
+                    <h6
+                      class="my-4 me-3 custumer-color-title-planification-sprint"
+                    >
+                      Processus
+                    </h6>
+                    <ul class="list-unstyled">
+                      <li class="my-3">
+                        <nb-icon
+                          class="mx-2"
+                          icon="checkmark-square-outline"
+                        ></nb-icon>
+                        <strong>Critères d'acceptation</strong> : L'équipe
+                        élabore les critères d'acceptation pour chaque User
+                        Story.
+                      </li>
+                      <li class="my-3">
+                        <nb-icon class="mx-2" icon="activity-outline"></nb-icon>
+                        <strong>Estimation de l'effort</strong> : Estime
+                        l'effort nécessaire pour terminer chaque histoire.
+                      </li>
+                      <li class="my-3">
+                        <nb-icon
+                          class="mx-2"
+                          icon="checkmark-circle-outline"
+                        ></nb-icon>
+                        <strong>Sélection des histoires</strong> : Choisit les
+                        histoires candidates en fonction de la capacité
+                        disponible pour l'itération.
+                      </li>
+                      <li class="my-3">
+                        <nb-icon class="mx-2" icon="layers-outline"></nb-icon>
+                        <strong>Planification des travaux</strong> : Planifie le
+                        travail nécessaire pour créer un incrément de valeur
+                        répondant à la définition du fait (DoD).
+                      </li>
+                      <li class="my-3">
+                        <nb-icon class="mx-2" icon="layout-outline"></nb-icon>
+                        <strong>Décomposition des éléments</strong> : Décompose
+                        les éléments du backlog en histoires d'utilisateurs ou
+                        d'activateurs complétables en un jour ou deux.
+                      </li>
+                      <li class="my-3">
+                        <nb-icon
+                          class="mx-2"
+                          icon="folder-add-outline"
+                        ></nb-icon>
+                        <strong>Engagement de l'équipe</strong> : L'équipe
+                        s'engage dans le travail et enregistre le backlog des
+                        itérations dans un endroit visible (storyboard, tableau
+                        Kanban, outil de gestion de projet Agile).
+                      </li>
+                    </ul>
+                    <h6
+                      class="my-4 me-3 custumer-color-title-planification-sprint"
+                    >
+                      Limite de Temps
+                    </h6>
+                    <p>
+                      La planification est limitée à un maximum d'environ deux
+                      heures pour une itération de deux semaines.
+                    </p>
+                    <h6
+                      class="my-4 me-3 custumer-color-title-planification-sprint"
+                    >
+                      En Résume
+                    </h6>
+                    En résumé, la planification des itérations dans SAFe est un
+                    processus collaboratif et structuré visant à définir et à
+                    organiser le travail de l'équipe pour l'itération à venir,
+                    tout en assurant l'alignement avec les objectifs de
+                    l'itération et les objectifs PI.
+                  </div>
+                </nb-accordion-item-body>
+              </nb-accordion-item>
+            </nb-accordion>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <h2 class="title">Niveaux de SAFe</h2>
+          </nb-card-header>
+          <nb-card-body>
+            <nb-accordion>
+              <nb-accordion-item>
+                <nb-accordion-item-header
+                  >Objectifs de Sprint
+                </nb-accordion-item-header>
+                <nb-accordion-item-body>
+                  <div class="row justify-content-center align-items-center">
+                    <div class="col-12 ms-2 col-md-8 safe_description">
+                      <div class="container mt-4">
+                        <h6
+                          class="my-4 me-3 custumer-color-title-planification-sprint"
+                        >
+                          Alignement et Coordination
+                        </h6>
+                        <ul class="list-unstyled my-3">
+                          <li class="my-3">
+                            <nb-icon icon="target-outline" pack="eva"></nb-icon>
+                            <strong>Aligner sur un objectif commun :</strong>
+                            Chaque membre comprend clairement ce que l'équipe
+                            s'efforce d'accomplir.
+                          </li>
+                          <li class="my-3">
+                            <nb-icon
+                              class="mx-2"
+                              icon="layers-outline"
+                              pack="eva"
+                            ></nb-icon>
+                            <strong
+                              >Harmoniser les efforts au niveau de l'ART PI
+                              :</strong
+                            >
+                            Faciliter la coordination entre les équipes et gérer
+                            les dépendances.
+                          </li>
+                          <li class="my-3">
+                            <nb-icon
+                              class="mx-2"
+                              icon="bar-chart-outline"
+                              pack="eva"
+                            ></nb-icon>
+                            <strong
+                              >Offrir transparence et informations de gestion
+                              :</strong
+                            >
+                            Fournir une vue claire de ce qui est prévu et des
+                            progrès réalisés.
+                          </li>
+                        </ul>
+
+                        <h6
+                          class="my-4 me-3 custumer-color-title-planification-sprint"
+                        >
+                          Création des Objectifs
+                        </h6>
+                        <p>
+                          Après avoir planifié l'itération et établi le backlog
+                          correspondant, l'équipe Agile synthétise les objectifs
+                          de l'itération. Ces objectifs sont dérivés du backlog
+                          et sont alignés sur les objectifs plus larges du PI
+                          (Program Increment).
+                        </p>
+                        <img
+                          src=" assets/images/golas.jpeg"
+                          class="img-fluid w-50 text-center"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </nb-accordion-item-body>
+              </nb-accordion-item>
+            </nb-accordion>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <h2 class="title">Carnet d’itérations</h2>
+          </nb-card-header>
+          <nb-card-body>
+            <div class="row">
+              <div class="col-12 p-3 text-center">
+                <p class="text-jutify custumer-line-height my-3">
+                  <span>
+                    Pendant la planification des itérations, les équipes
+                    choisissent les tâches à accomplir dans le backlog
+                    d'itération en extrayant des éléments du backlog d'équipe.
+                    Ce backlog d'itération est ajusté régulièrement, car la
+                    planification PI est générale et nécessite des adaptations à
+                    chaque itération. Les équipes reçoivent des retours de leurs
+                    itérations passées, ainsi que des démonstrations du système
+                    et des autres équipes avec lesquelles elles collaborent. Les
+                    préoccupations locales telles que les défauts, la dette
+                    technologique et la maintenance, ainsi que les retards au
+                    niveau de l'ART et les objectifs PI engagés, influencent
+                    également le contenu du backlog d'itération.</span
+                  >
+                </p>
+                <div class="text-center mt-5">
+                  <img
+                    src=" assets/images/carnet.jpeg"
+                    class="img-fluid w-50"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <h2 class="title">Livrer</h2>
+          </nb-card-header>
+          <nb-card-body>
+            <div class="row">
+              <div class="col-12 p-3 text-center">
+                <p class="text-jutify custumer-line-height my-3">
+                  <span>
+                    Dans SAFe, les équipes Scrum respectent les cadences et
+                    synchronisations de l'ART (Agile Release Train), ce qui
+                    facilite l'alignement, la gestion des dépendances, et des
+                    cycles d'apprentissage rapides pour l'ensemble de la
+                    solution. Pendant une itération, chaque équipe collabore
+                    pour définir, construire, et tester les histoires
+                    planifiées. Elles suivent la progression de l'itération,
+                    améliorent le flux de valeur avec des tableaux Kanban, et
+                    participent à des événements de synchronisation d'équipe.
+                    Les équipes livrent des histoires tout au long de
+                    l'itération et évitent les retards. Elles appliquent des
+                    pratiques de qualité pour construire le système
+                    correctement. Les histoires terminées sont présentées lors
+                    de démonstrations et de revues d'itération régulières.</span
+                  >
+                </p>
+                <div class="text-center mt-5">
+                  <img
+                    src=" assets/images/livraison.jpeg"
+                    class="img-fluid w-50"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header
+            class="d-flex justify-content-between align-items-center"
+          >
+            <h2>Synchronisation d'équipe</h2>
+
+            />
+          </nb-card-header>
+          <nb-card-body>
+            <div class="d-flex text-danger">
+              <p class="safe_description">
+                <strong> La synchronisation d'équipe </strong>
+                est une réunion courte et quotidienne (généralement 15 minutes
+                ou moins) pour évaluer les progrès vers les objectifs
+                d'itération, communiquer et ajuster le travail à venir. <br />
+                <span>
+                  L'équipe peut utiliser diverses structures ou techniques pour
+                  cette synchronisation, établissant ainsi un plan d'action pour
+                  coordonner la journée de travail à venir. Cependant, cette
+                  réunion n'est pas le seul moment où les ajustements peuvent
+                  être faits : l'équipe collabore et discute également des
+                  adaptations ou des replanifications nécessaires à tout moment.
+                  Les équipes les plus performantes utilisent cette
+                  synchronisation pour identifier des opportunités de soutien
+                  mutuel afin d'atteindre avec succès leurs objectifs
+                  d'itération. Le Scrum Master ou le Team Coach prend note des
+                  sujets nécessitant une discussion plus approfondie sur un
+                  tableau dédié aux "rencontres après". Seules les parties
+                  concernées restent pour discuter plus en détail de ces sujets.
+                  Des synchronisations d'équipe inefficaces peuvent révéler des
+                  problèmes plus profonds nécessitant une approche systémique
+                  pour leur résolution, souvent sous la responsabilité du Scrum
+                  Master ou du Team Coach.
+                  <div class="text-center mt-5">
+                    <img
+                      src=" assets/images/eqipe.png"
+                      class="img-fluid w-50"
+                    />
+                  </div>
+                </span>
+              </p>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <div class="d-flex align-items-center">
+              <h2>Illustration de l'Incrément Agile</h2>
+            </div>
+          </nb-card-header>
+          <nb-card-body>
+            <p>
+              <nb-icon class="mx-2" icon="cube-outline" pack="eva"></nb-icon>
+              Illustration L'incrément illustré ci-dessous montre comment les
+              nouvelles fonctionnalités de la solution évoluent à chaque
+              itération. Chaque incrément s'ajoute à ceux qui l'ont précédé et
+              est vérifié pour assurer leur bon fonctionnement ensemble.
+            </p>
+            <div class="d-flex justify-content-center align-items-center mt-3">
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+            </div>
+            <p class="mt-3">
+              <nb-icon class="mx-2" icon="cube-outline" pack="eva"></nb-icon>
+              Chaque incrément est une solution fonctionnelle, testée et
+              utilisable qui répond aux critères de qualité définis dans la
+              définition de finition (DoD). L'équipe peut livrer plusieurs
+              incréments au cours d'une seule itération, et l'ensemble est
+              inspecté lors de la revue d'itération pour validation.
+            </p>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <div class="d-flex align-items-center">
+              <h6 class="ml-2">Examen des Itérations Agile</h6>
+            </div>
+          </nb-card-header>
+          <nb-card-body>
+            <p>
+              <nb-icon class="mx-2" icon="eye-outline" pack="eva"></nb-icon>
+              Pour les équipes Scrum, la revue d'itération est un événement
+              crucial où chaque équipe inspecte les résultats de l'itération.
+              Elles présentent leur travail aux principales parties prenantes et
+              évaluent les progrès vers les objectifs de l'itération et les
+              objectifs PI.
+            </p>
+            <div class="d-flex justify-content-center align-items-center mt-3">
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+            </div>
+            <p class="mt-3">
+              <nb-icon class="mx-2" icon="eye-outline" pack="eva"></nb-icon>
+              L'équipe détermine également les adaptations futures du produit ou
+              du processus en fonction des résultats de la revue. Les parties
+              prenantes et l'équipe collaborent sur la marche à suivre, ajustant
+              éventuellement le Team Backlog pour répondre à de nouvelles
+              opportunités. La revue d'itération est limitée dans le temps à un
+              maximum de 90 minutes pour une itération typique de deux semaines.
+            </p>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <div class="d-flex align-items-center">
+              <h6 class="ml-2">Rétrospective des Itérations</h6>
+            </div>
+          </nb-card-header>
+          <nb-card-body>
+            <div
+              class="row p-2 d-flex justify-content-center align-items-center"
+            >
+              <div class="col-12 col-md-6 p-2">
+                <p>
+                  <nb-icon
+                    class="mx-2"
+                    icon="clipboard-outline"
+                    pack="eva"
+                  ></nb-icon>
+                  La Rétrospective Itération est le dernier événement de
+                  l’itération. Son objectif principal est de réfléchir sur
+                  l'itération et d'en dériver de nouvelles idées pour améliorer
+                  son processus et la solution. La rétrospective contribue à
+                  inculquer le concept d'amélioration continue, une des valeurs
+                  fondamentales de SAFe.
+                </p>
+                <div
+                  class="d-flex justify-content-center align-items-center mt-3"
+                >
+                  <nb-icon
+                    icon="checkmark-circle-outline"
+                    pack="eva"
+                    size="large"
+                    class="mr-2"
+                  ></nb-icon>
+                  <nb-icon
+                    icon="checkmark-circle-outline"
+                    pack="eva"
+                    size="large"
+                    class="mr-2"
+                  ></nb-icon>
+                  <nb-icon
+                    icon="checkmark-circle-outline"
+                    pack="eva"
+                    size="large"
+                    class="mr-2"
+                  ></nb-icon>
+                </div>
+                <p class="mt-3">
+                  <nb-icon
+                    class="mx-2"
+                    icon="clipboard-outline"
+                    pack="eva"
+                  ></nb-icon>
+                  L’équipe discute de ce qui s'est bien passé, des problèmes
+                  rencontrés et de la manière dont ces problèmes ont été (ou
+                  n'ont pas été) résolus. Ils identifient les changements les
+                  plus utiles à améliorer, à traiter dès que possible ou à
+                  enregistrer dans le backlog pour l'itération suivante. La
+                  rétrospective est limitée à un maximum d'environ 60 minutes
+                  pour une itération typique de deux semaines.
+                </p>
+              </div>
+              <div class="col-12 offset-md-1 col-md-5 p-2">
+                <img src=" assets/images/retro.jpeg" class="img-fluid w-75" />
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <div class="d-flex align-items-center">
+              <h6 class="ml-2">Participer à la Démo du Système</h6>
+            </div>
+          </nb-card-header>
+          <nb-card-body>
+            <div
+              class="row p-2 d-flex justify-content-center align-items-center"
+            >
+              <div class="col-12 col-md-6 p-2">
+                <p>
+                  <nb-icon class="mx-2" icon="tv-outline" pack="eva"></nb-icon>
+                  La démo système offre une vue complète des nouvelles
+                  fonctionnalités livrées lors de la dernière itération par
+                  toutes les équipes de l'ART. Chaque démo permet à tous les
+                  membres de l'ART d'évaluer objectivement les progrès accomplis
+                  pendant l'IP.
+                </p>
+                <div
+                  class="d-flex justify-content-center align-items-center mt-3"
+                >
+                  <nb-icon
+                    icon="checkmark-circle-outline"
+                    pack="eva"
+                    size="large"
+                    class="mr-2"
+                  ></nb-icon>
+                  <nb-icon
+                    icon="checkmark-circle-outline"
+                    pack="eva"
+                    size="large"
+                    class="mr-2"
+                  ></nb-icon>
+                  <nb-icon
+                    icon="checkmark-circle-outline"
+                    pack="eva"
+                    size="large"
+                    class="mr-2"
+                  ></nb-icon>
+                </div>
+                <p class="mt-3">
+                  <nb-icon class="mx-2" icon="tv-outline" pack="eva"></nb-icon>
+                  Tous les membres de l'ART participent ou assistent à la
+                  démonstration du système, assurant ainsi une vision collective
+                  et un partage des avancées réalisées.
+                </p>
+              </div>
+              <div class="col-12 offset-md-1 col-md-5 p-2">
+                <img src=" assets/images/demo.png" class="img-fluid w-50" />
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <div class="d-flex align-items-center">
+              <h6 class="ml-2">Suivi des Progrès</h6>
+            </div>
+          </nb-card-header>
+          <nb-card-body>
+            <p>
+              <nb-icon
+                class="mx-2"
+                icon="clipboard-outline"
+                pack="eva"
+              ></nb-icon>
+              À l'aide d'un tableau Kanban, l'équipe suit la progression de ses
+              itérations comme montre la figure suivante. Les équipes Scrum
+              matures livrent des histoires tout au long de l'itération sans «
+              faire chuter » le délai.
+            </p>
+            <div class="d-flex justify-content-center align-items-center mt-3">
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+              <nb-icon
+                icon="checkmark-circle-outline"
+                pack="eva"
+                size="large"
+                class="mr-2"
+              ></nb-icon>
+            </div>
+            <div class="text-center mt-5">
+              <img src=" assets/images/SuiviProg.png" class="img-fluid w-75" />
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <div class="d-flex align-items-center">
+              <h6 class="ml-2">Rôles SAFe Scrum</h6>
+            </div>
+          </nb-card-header>
+          <nb-card-body>
+            <div
+              class="row d-flex p-2 justify-content-center align-items-center"
+            >
+              <div class="col-12 col-md-7 p-1">
+                <ul class="my-3">
+                  <li class="my-3">
+                    <nb-icon
+                      class="mx-2"
+                      icon="people-outline"
+                      pack="eva"
+                    ></nb-icon>
+                    La taille de l'équipe Scrum (généralement dix personnes ou
+                    moins) optimise la communication, l'interaction et la
+                    capacité à apporter de la valeur.
+                  </li>
+                  <li class="my-3">
+                    <nb-icon
+                      class="mx-2"
+                      icon="shield-outline"
+                      pack="eva"
+                    ></nb-icon>
+                    "L'équipe Scrum est suffisamment petite pour rester agile et
+                    suffisamment grande pour accomplir un travail important en
+                    un sprint."
+                  </li>
+                  <li class="my-3">
+                    <nb-icon
+                      class="mx-2"
+                      icon="people-outline"
+                      pack="eva"
+                    ></nb-icon>
+                    Toutes les équipes SAFe Agile, y compris celles qui
+                    utilisent Scrum, ont deux rôles d'équipe spécialisés :
+                    <ul>
+                      <li class="my-3">
+                        <nb-icon
+                          class="mx-2"
+                          icon="shield-outline"
+                          pack="eva"
+                        ></nb-icon>
+                        Le Scrum Master/Team Coach (parfois à temps partiel)
+                        coordonne le flux de travail, encourageant un
+                        environnement propice à la haute performance et à
+                        l'amélioration continue.
+                      </li>
+                      <li class="my-3">
+                        <nb-icon
+                          class="mx-2"
+                          icon="shield-outline"
+                          pack="eva"
+                        ></nb-icon>
+                        Le Product Owner (généralement à temps plein) comprend
+                        les besoins des clients, priorise le backlog de l'équipe
+                        et assure que le bon travail est réalisé de la bonne
+                        manière.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 offset-md-1 col-md-4 p-2">
+                <img
+                  src=" assets/images/scrumMaster.png"
+                  class="img-fluid w-100"
+                />
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <div class="d-flex align-items-center">
+              <h6 class="ml-2">Les Équipes dans le Train Agile</h6>
+            </div>
+          </nb-card-header>
+          <nb-card-body>
+            <p>
+              <nb-icon class="mx-2" icon="people-outline" pack="eva"></nb-icon>
+              Bien que les équipes soient interfonctionnelles, une seule équipe
+              Agile peut ne pas être en mesure de fournir une valeur complète à
+              l'utilisateur final pour de grands systèmes incluant différentes
+              plates-formes technologiques et disciplines variées comme
+              l'ingénierie matérielle, logicielle et système.
+            </p>
+            <p>
+              <nb-icon
+                class="mx-2"
+                icon="checkmark-circle-outline"
+                pack="eva"
+              ></nb-icon>
+              Les équipes doivent s’efforcer de fournir une valeur de bout en
+              bout de manière la plus indépendante possible afin d’optimiser les
+              flux.
+            </p>
+            <p>
+              <nb-icon class="mx-2" icon="grid-outline" pack="eva"></nb-icon>
+              Au sein de l'Agile Release Train (ART), toutes les équipes
+              planifient, font des démonstrations et apprennent ensemble,
+              facilitant l'alignement et la collaboration pour créer des
+              solutions plus vastes.
+            </p>
+            <p>
+              <nb-icon class="mx-2" icon="sync-outline" pack="eva"></nb-icon>
+              L'ART permet de réduire ou éliminer les dépendances et d'améliorer
+              le flux d'équipe et d'ART, favorisant l'exploration,
+              l'intégration, le déploiement et la libération de valeur de
+              manière plus indépendante.
+            </p>
+
+            <img src=" assets/images/AgileTrain.png" class="img-fluid w-100" />
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-4">
+        <nb-card>
+          <nb-card-body>
+            <h5 class="card-title">Témoignage 1</h5>
+            <p class="card-text">
+              Des choses révolutionnaires peuvent se produire lorsque la pizza
+              est servie. Vous découvrirez pourquoi en rejoignant les
+              visionnaires de Porsche, Mattias Ulbrich et Dr. Oliver Seifert,
+              pour une discussion franche sur la transformation de l'une des
+              marques automobiles les plus emblématiques du monde en pionnier
+              numérique.
+            </p>
+            <div class="embed-responsive embed-responsive-16by9 mb-3">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.youtube.com/embed/video_id_2"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- <div class="video-container">
+              <iframe
+                src="https://youtu.be/MzswnGpVtMc?si=ZfOFXSP6a74lhlf7"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div> -->
+          </nb-card-body>
+        </nb-card>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <nb-card>
+          <nb-card-body>
+            <h5 class="card-title">Témoignage 2</h5>
+            <p class="card-text">
+              Lorsque le PDG de votre entreprise parraine une initiative
+              stratégique pour remplacer un système central en seulement deux
+              ans, la pression pour réussir est énorme. Pour ajouter à la
+              difficulté, la migration devrait se faire par une bascule complète
+              du vieux système vers le nouveau ; il n'y avait tout simplement
+              pas moyen de faire fonctionner les deux systèmes simultanément.
+            </p>
+            <div class="embed-responsive embed-responsive-16by9 mb-3">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.youtube.com/embed/video_id_2"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- <a
+              href="https://www.youtube.com/watch?v=video_id_2"
+              class="btn btn-primary btn-sm"
+              target="_blank"
+              >Voir sur YouTube</a
+            > -->
+          </nb-card-body>
+        </nb-card>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <nb-card>
+          <nb-card-body>
+            <h5 class="card-title">Témoignage 3</h5>
+            <p class="card-text">
+              Des choses révolutionnaires peuvent se produire lorsque la pizza
+              est servie. Vous découvrirez pourquoi en rejoignant les
+              visionnaires de Porsche, Mattias Ulbrich et Dr. Oliver Seifert,
+              pour une discussion franche sur la transformation de l'une des
+              marques automobiles les plus emblématiques du monde en pionnier
+              numérique.
+            </p>
+            <div class="embed-responsive embed-responsive-16by9 mb-3">
+              <iframe
+                class="embed-responsive-item"
+                src="https://www.youtube.com/embed/video_id_3"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- <a
+              href="https://www.youtube.com/watch?v=video_id_3"
+              class="btn btn-primary btn-sm"
+              target="_blank"
+              >Voir sur YouTube</a
+            > -->
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-header>
+            <div class="d-flex align-items-center text-center">
+              <h6 class="ml-2">Conclusion sur SAFe</h6>
+            </div>
+          </nb-card-header>
+          <nb-card-body>
+            <p>
+              <nb-icon
+                class="mx-2"
+                icon="checkmark-circle-outline"
+                pack="eva"
+              ></nb-icon>
+              SAFe offre une approche structurée pour l'adoption Agile à grande
+              échelle, alignant stratégie et opérations à travers différents
+              niveaux de l'organisation.
+            </p>
+            <p>
+              <nb-icon
+                class="mx-2"
+                icon="checkmark-circle-outline"
+                pack="eva"
+              ></nb-icon>
+              En intégrant des principes Lean-Agile, SAFe favorise la livraison
+              continue de valeur client, améliorant la qualité et la
+              prévisibilité des livraisons.
+            </p>
+            <p>
+              <nb-icon
+                class="mx-2"
+                icon="checkmark-circle-outline"
+                pack="eva"
+              ></nb-icon>
+              Les rôles définis et les événements structurés encouragent
+              l'auto-organisation des équipes tout en facilitant la coordination
+              et la gestion des dépendances.
+            </p>
+            <p>
+              <nb-icon
+                class="mx-2"
+                icon="checkmark-circle-outline"
+                pack="eva"
+              ></nb-icon>
+              SAFe promeut l'innovation continue par la réflexion régulière,
+              l'amélioration des processus et l'adaptation rapide aux
+              changements du marché.
+            </p>
+            <p>
+              <nb-icon
+                class="mx-2"
+                icon="checkmark-circle-outline"
+                pack="eva"
+              ></nb-icon>
+              Ce cadre aide les organisations à devenir plus flexibles,
+              réactives et orientées vers la valeur client, renforçant leur
+              compétitivité dans un environnement dynamique.
+            </p>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+  </nb-layout-column>
+</nb-layout>

@@ -1,0 +1,115 @@
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes colorChange {
+    0%, 100% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: orange; }
+  }
+  
+  .header-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .main-title {
+    font-size: 48px; /* Changez cette valeur pour ajuster la taille de la police */
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .animated-title span {
+    animation: fadeIn 2s ease-in-out infinite, colorChange 8s linear infinite; /* Animation de la couleur et du mouvement */
+  }
+  
+  .title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  
+  .flex-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .home-button {
+    margin-top: 20px;
+  }
+  .custumer_showMore{
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  .safe_description{
+    font-size: medium;
+    letter-spacing: 0.7px;
+ line-height: 2;
+  }
+  .custumer_logoSafe{
+    height:8.5%;
+    width: 8.5%;
+  }
+
+
+
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+     
+    margin-top: 20px; /* Ajoute un espace au-dessus de la vidéo */
+  }
+  
+  .video-container iframe, .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+
+ 
+
+
+
+
+
+
+   
+  
+  .advantages-inconvenients ul {
+    list-style-type: none; /* Supprime les points de la liste */
+    padding: 0;
+  }
+  
+  
+  .custumer-color-title-planification-sprint{
+    color:#007bff;
+  }
+  .custumer-line-height{
+    line-height: 2;
+  }
